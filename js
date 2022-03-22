@@ -5,9 +5,9 @@ let situationHp = false
 let card0 = {
   name: 'Bulbasaur',
   status: {
-    atk: 7,
-    def: 8,
-    hp: 8
+    atk: 3,
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'
 }
@@ -15,9 +15,9 @@ let card0 = {
 let card1 = {
   name: 'Ivysair',
   status: {
-    atk: 8,
-    def: 9,
-    hp: 12
+    atk: 4,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png'
 }
@@ -25,69 +25,69 @@ let card1 = {
 let card2 = {
   name: 'Venusaur',
   status: {
-    atk: 12,
-    def: 11,
-    hp: 15
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png'
 }
 
 let card3 = {
-  name: 'Squirtle',
+  name: 'Charmander',
   status: {
-    atk: 5,
-    def: 10,
-    hp: 8
+    atk: 3,
+    def: 4,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png'
 }
 
 let card4 = {
-  name: 'Warturtle',
+  name: 'Charmeleon',
   status: {
-    atk: 7,
-    def: 11,
-    hp: 9
+    atk: 4,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png'
 }
 
 let card5 = {
-  name: 'Blastoise',
+  name: 'Charizard',
   status: {
-    atk: 10,
-    def: 13,
-    hp: 12
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png'
 }
 
 let card6 = {
-  name: 'Charmander',
+  name: 'Squirtle',
   status: {
-    atk: 9,
-    def: 7,
-    hp: 7
+    atk: 3,
+    def: 4,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png'
 }
 
 let card7 = {
-  name: 'Charmeleon',
+  name: 'Wartortle',
   status: {
-    atk: 10,
-    def: 7,
-    hp: 7
+    atk: 4,
+    def: 5,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png'
 }
 
 let card8 = {
-  name: 'Charizard',
+  name: 'Blastoise',
   status: {
-    atk: 13,
-    def: 8,
-    hp: 9
+    atk: 5,
+    def: 6,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png'
 }
@@ -95,8 +95,8 @@ let card8 = {
 let card9 = {
   name: 'Caterpie',
   status: {
-    atk: 3,
-    def: 2,
+    atk: 2,
+    def: 3,
     hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png'
@@ -106,8 +106,8 @@ let card10 = {
   name: 'Metapod',
   status: {
     atk: 2,
-    def: 10,
-    hp: 12
+    def: 4,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png'
 }
@@ -115,9 +115,9 @@ let card10 = {
 let card11 = {
   name: 'Butterfree',
   status: {
-    atk: 13,
-    def: 8,
-    hp: 10
+    atk: 3,
+    def: 3,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png'
 }
@@ -135,9 +135,9 @@ let card12 = {
 let card13 = {
   name: 'Kakuna',
   status: {
-    atk: 3,
-    def: 9,
-    hp: 12
+    atk: 2,
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png'
 }
@@ -145,9 +145,9 @@ let card13 = {
 let card14 = {
   name: 'Beedrill',
   status: {
-    atk: 13,
-    def: 9,
-    hp: 9
+    atk: 6,
+    def: 3,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png'
 }
@@ -155,9 +155,9 @@ let card14 = {
 let card15 = {
   name: 'Pidgey',
   status: {
-    atk: 4,
-    def: 5,
-    hp: 5
+    atk: 3,
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png'
 }
@@ -165,9 +165,9 @@ let card15 = {
 let card16 = {
   name: 'Pidgeotto',
   status: {
-    atk: 8,
-    def: 7,
-    hp: 6
+    atk: 4,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png'
 }
@@ -175,9 +175,9 @@ let card16 = {
 let card17 = {
   name: 'Pidgeot',
   status: {
-    atk: 14,
-    def: 9,
-    hp: 10
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png'
 }
@@ -185,9 +185,9 @@ let card17 = {
 let card18 = {
   name: 'Rattata',
   status: {
-    atk: 7,
-    def: 5,
-    hp: 5
+    atk: 4,
+    def: 3,
+    hp: 2
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png'
 }
@@ -195,9 +195,9 @@ let card18 = {
 let card19 = {
   name: 'Raticate',
   status: {
-    atk: 10,
-    def: 8,
-    hp: 9
+    atk: 5,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png'
 }
@@ -205,9 +205,9 @@ let card19 = {
 let card20 = {
   name: 'Spearow',
   status: {
-    atk: 5,
-    def: 5,
-    hp: 5
+    atk: 4,
+    def: 2,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png'
 }
@@ -215,9 +215,9 @@ let card20 = {
 let card21 = {
   name: 'Fearow',
   status: {
-    atk: 9,
-    def: 7,
-    hp: 8
+    atk: 6,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png'
 }
@@ -225,9 +225,9 @@ let card21 = {
 let card22 = {
   name: 'Ekans',
   status: {
-    atk: 5,
+    atk: 4,
     def: 3,
-    hp: 4
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png'
 }
@@ -235,9 +235,9 @@ let card22 = {
 let card23 = {
   name: 'Arbok',
   status: {
-    atk: 10,
-    def: 7,
-    hp: 7
+    atk: 6,
+    def: 5,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png'
 }
@@ -245,9 +245,9 @@ let card23 = {
 let card24 = {
   name: 'Pikachu',
   status: {
-    atk: 6,
-    def: 5,
-    hp: 6
+    atk: 4,
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png'
 }
@@ -255,9 +255,9 @@ let card24 = {
 let card25 = {
   name: 'Raichu',
   status: {
-    atk: 10,
-    def: 7,
-    hp: 8
+    atk: 6,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png'
 }
@@ -265,9 +265,9 @@ let card25 = {
 let card26 = {
   name: 'Sandshrew',
   status: {
-    atk: 6,
-    def: 9,
-    hp: 7
+    atk: 5,
+    def: 5,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png'
 }
@@ -275,9 +275,9 @@ let card26 = {
 let card27 = {
   name: 'Sandslash',
   status: {
-    atk: 9,
-    def: 12,
-    hp: 10
+    atk: 6,
+    def: 5,
+    hp: 7
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png'
 }
@@ -285,9 +285,9 @@ let card27 = {
 let card28 = {
   name: 'Nidoran(F)',
   status: {
-    atk: 4,
+    atk: 3,
     def: 4,
-    hp: 5
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png'
 }
@@ -295,9 +295,9 @@ let card28 = {
 let card29 = {
   name: 'Nidorina',
   status: {
-    atk: 6,
-    def: 8,
-    hp: 7
+    atk: 4,
+    def: 4,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png'
 }
@@ -305,9 +305,9 @@ let card29 = {
 let card30 = {
   name: 'Nidoqueen',
   status: {
-    atk: 11,
-    def: 13,
-    hp: 10
+    atk: 6,
+    def: 6,
+    hp: 6
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png'
 }
@@ -316,8 +316,8 @@ let card31 = {
   name: 'Nidoran(M)',
   status: {
     atk: 4,
-    def: 4,
-    hp: 5
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/032.png'
 }
@@ -325,9 +325,9 @@ let card31 = {
 let card32 = {
   name: 'Nidorino',
   status: {
-    atk: 7,
-    def: 6,
-    hp: 6
+    atk: 5,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/033.png'
 }
@@ -335,9 +335,9 @@ let card32 = {
 let card33 = {
   name: 'Nidoking',
   status: {
-    atk: 11,
-    def: 10,
-    hp: 11
+    atk: 6,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png'
 }
@@ -345,9 +345,9 @@ let card33 = {
 let card34 = {
   name: 'Clefairy',
   status: {
-    atk: 5,
-    def: 6,
-    hp: 7
+    atk: 3,
+    def: 3,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png'
 }
@@ -355,9 +355,9 @@ let card34 = {
 let card35 = {
   name: 'Clefable',
   status: {
-    atk: 6,
-    def: 8,
-    hp: 11
+    atk: 5,
+    def: 5,
+    hp: 6
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png'
 }
@@ -365,9 +365,9 @@ let card35 = {
 let card36 = {
   name: 'Vulpix',
   status: {
-    atk: 5,
+    atk: 3,
     def: 3,
-    hp: 4
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png'
 }
@@ -375,9 +375,9 @@ let card36 = {
 let card37 = {
   name: 'Ninetales',
   status: {
-    atk: 10,
-    def: 7,
-    hp: 7
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png'
 }
@@ -386,8 +386,8 @@ let card38 = {
   name: 'Jigglypuff',
   status: {
     atk: 3,
-    def: 5,
-    hp: 8
+    def: 2,
+    hp: 7
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png'
 }
@@ -396,8 +396,8 @@ let card39 = {
   name: 'Wigglytuff',
   status: {
     atk: 5,
-    def: 8,
-    hp: 11
+    def: 3,
+    hp: 9
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png'
 }
@@ -405,9 +405,9 @@ let card39 = {
 let card40 = {
   name: 'Zubat',
   status: {
-    atk: 4,
+    atk: 3,
     def: 3,
-    hp: 4
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png'
 }
@@ -415,9 +415,9 @@ let card40 = {
 let card41 = {
   name: 'Golbat',
   status: {
-    atk: 7,
+    atk: 5,
     def: 5,
-    hp: 7
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png'
 }
@@ -426,8 +426,8 @@ let card42 = {
   name: 'Oddish',
   status: {
     atk: 3,
-    def: 3,
-    hp: 4
+    def: 4,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png'
 }
@@ -435,9 +435,9 @@ let card42 = {
 let card43 = {
   name: 'Gloom',
   status: {
-    atk: 6,
-    def: 6,
-    hp: 8
+    atk: 4,
+    def: 5,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png'
 }
@@ -445,9 +445,9 @@ let card43 = {
 let card44 = {
   name: 'Vileplume',
   status: {
-    atk: 8,
-    def: 7,
-    hp: 11
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png'
 }
@@ -456,8 +456,8 @@ let card45 = {
   name: 'Paras',
   status: {
     atk: 5,
-    def: 3,
-    hp: 4
+    def: 4,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png'
 }
@@ -465,9 +465,9 @@ let card45 = {
 let card46 = {
   name: 'Parasect',
   status: {
-    atk: 8,
-    def: 8,
-    hp: 6
+    atk: 6,
+    def: 5,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/047.png'
 }
@@ -475,9 +475,9 @@ let card46 = {
 let card47 = {
   name: 'Venonat',
   status: {
-    atk: 6,
-    def: 4,
-    hp: 5
+    atk: 4,
+    def: 3,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/048.png'
 }
@@ -485,9 +485,9 @@ let card47 = {
 let card48 = {
   name: 'Venomoth',
   status: {
-    atk: 9,
-    def: 7,
-    hp: 7
+    atk: 4,
+    def: 4,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png'
 }
@@ -495,9 +495,9 @@ let card48 = {
 let card49 = {
   name: 'Diglett',
   status: {
-    atk: 5,
-    def: 8,
-    hp: 5
+    atk: 4,
+    def: 2,
+    hp: 1
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png'
 }
@@ -506,8 +506,8 @@ let card50 = {
   name: 'Dugtrio',
   status: {
     atk: 999,
-    def: 8,
-    hp: 5
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/051.png'
 }
@@ -515,9 +515,9 @@ let card50 = {
 let card51 = {
   name: 'Meowth',
   status: {
-    atk: 5,
-    def: 5,
-    hp: 6
+    atk: 3,
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png'
 }
@@ -525,9 +525,9 @@ let card51 = {
 let card52 = {
   name: 'Persian',
   status: {
-    atk: 9,
-    def: 6,
-    hp: 7
+    atk: 5,
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png'
 }
@@ -535,9 +535,9 @@ let card52 = {
 let card53 = {
   name: 'Psyduck',
   status: {
-    atk: 6,
+    atk: 4,
     def: 3,
-    hp: 6
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png'
 }
@@ -545,9 +545,9 @@ let card53 = {
 let card54 = {
   name: 'Golduck',
   status: {
-    atk: 10,
-    def: 7,
-    hp: 7
+    atk: 5,
+    def: 5,
+    hp: 5
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/055.png'
 }
@@ -556,8 +556,8 @@ let card55 = {
   name: 'Mankey',
   status: {
     atk: 5,
-    def: 5,
-    hp: 6
+    def: 3,
+    hp: 3
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png'
 }
@@ -566,8 +566,8 @@ let card56 = {
   name: 'Primeape',
   status: {
     atk: 7,
-    def: 6,
-    hp: 7
+    def: 4,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png'
 }
@@ -575,9 +575,9 @@ let card56 = {
 let card57 = {
   name: 'Growlithe',
   status: {
-    atk: 6,
-    def: 5,
-    hp: 6
+    atk: 5,
+    def: 3,
+    hp: 4
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png'
 }
@@ -585,11 +585,941 @@ let card57 = {
 let card58 = {
   name: 'Arcanine',
   status: {
-    atk: 9,
+    atk: 7,
     def: 5,
     hp: 6
   },
   image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png'
+}
+
+let card59 = {
+  name: 'Poliwag',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/60.png'
+}
+
+let card60 = {
+  name: 'Poliwhirl',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/61.png'
+}
+
+let card61 = {
+  name: 'Poliwrath',
+  status: {
+    atk: 6,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/62.png'
+}
+
+let card62 = {
+  name: 'Abra',
+  status: {
+    atk: 2,
+    def: 1,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/63.png'
+}
+
+let card63 = {
+  name: 'Kadabra',
+  status: {
+    atk: 3,
+    def: 2,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/64.png'
+}
+
+let card64 = {
+  name: 'Alakazam',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/65.png'
+}
+
+let card65 = {
+  name: 'Machop',
+  status: {
+    atk: 5,
+    def: 3,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/66.png'
+}
+
+let card66 = {
+  name: 'Machoke',
+  status: {
+    atk: 6,
+    def: 5,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/67.png'
+}
+
+let card67 = {
+  name: 'Machamp',
+  status: {
+    atk: 8,
+    def: 5,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/68.png'
+}
+
+let card68 = {
+  name: 'Bellsprout',
+  status: {
+    atk: 5,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/69.png'
+}
+
+let card69 = {
+  name: 'Weepinbell',
+  status: {
+    atk: 6,
+    def: 3,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/70.png'
+}
+
+let card70 = {
+  name: 'Victreebel',
+  status: {
+    atk: 7,
+    def: 4,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/71.png'
+}
+
+let card71 = {
+  name: 'Tentacool',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/72.png'
+}
+
+let card72 = {
+  name: 'Tentacruel',
+  status: {
+    atk: 5,
+    def: 4,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/73.png'
+}
+
+let card73 = {
+  name: 'Geodude',
+  status: {
+    atk: 5,
+    def: 6,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/74.png'
+}
+
+let card74 = {
+  name: 'Graveler',
+  status: {
+    atk: 6,
+    def: 7,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/75.png'
+}
+
+let card75 = {
+  name: 'Golem',
+  status: {
+    atk: 8,
+    def: 8,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/76.png'
+}
+
+let card76 = {
+  name: 'Ponyta',
+  status: {
+    atk: 5,
+    def: 4,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/77.png'
+}
+
+let card77 = {
+  name: 'Rapidash',
+  status: {
+    atk: 6,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/78.png'
+}
+
+let card78 = {
+  name: 'Slowpoke',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/79.png'
+}
+
+let card79 = {
+  name: 'Slowbro',
+  status: {
+    atk: 5,
+    def: 7,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/80.png'
+}
+
+let card80 = {
+  name: 'Magnemite',
+  status: {
+    atk: 3,
+    def: 5,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/81.png'
+}
+
+let card81 = {
+  name: 'Magneton',
+  status: {
+    atk: 4,
+    def: 6,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/82.png'
+}
+
+let card82 = {
+  name: 'Farfetchd',
+  status: {
+    atk: 6,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/83.png'
+}
+
+let card83 = {
+  name: 'Doduo',
+  status: {
+    atk: 5,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/84.png'
+}
+
+let card84 = {
+  name: 'Dodrio',
+  status: {
+    atk: 7,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/85.png'
+}
+
+let card85 = {
+  name: 'Seel',
+  status: {
+    atk: 3,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/86.png'
+}
+
+let card86 = {
+  name: 'Dewgong',
+  status: {
+    atk: 5,
+    def: 5,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/87.png'
+}
+
+let card87 = {
+  name: 'Grimer',
+  status: {
+    atk: 5,
+    def: 3,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/88.png'
+}
+
+let card88 = {
+  name: 'Muk',
+  status: {
+    atk: 7,
+    def: 5,
+    hp: 7
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/89.png'
+}
+
+let card89 = {
+  name: 'Shellder',
+  status: {
+    atk: 4,
+    def: 6,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/90.png'
+}
+
+let card90 = {
+  name: 'Cloyster',
+  status: {
+    atk: 6,
+    def: 11,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/91.png'
+}
+
+let card91 = {
+  name: 'Gastly',
+  status: {
+    atk: 3,
+    def: 2,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/92.png'
+}
+
+let card92 = {
+  name: 'Haunter',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/93.png'
+}
+
+let card93 = {
+  name: 'Gengar',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/94.png'
+}
+
+let card94 = {
+  name: 'Onix',
+  status: {
+    atk: 3,
+    def: 10,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/95.png'
+}
+
+let card95 = {
+  name: 'Drowzee',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/96.png'
+}
+
+let card96 = {
+  name: 'Hypno',
+  status: {
+    atk: 5,
+    def: 5,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/97.png'
+}
+
+let card97 = {
+  name: 'Krabby',
+  status: {
+    atk: 7,
+    def: 6,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/98.png'
+}
+
+let card98 = {
+  name: 'Kingler',
+  status: {
+    atk: 8,
+    def: 7,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/99.png'
+}
+
+let card99 = {
+  name: 'Voltorb',
+  status: {
+    atk: 2,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png'
+}
+
+let card100 = {
+  name: 'Electrode',
+  status: {
+    atk: 3,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png'
+}
+
+let card101 = {
+  name: 'Exeggcute',
+  status: {
+    atk: 3,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png'
+}
+
+let card102 = {
+  name: 'Exeggutor',
+  status: {
+    atk: 6,
+    def: 5,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png'
+}
+
+let card103 = {
+  name: 'Cubone',
+  status: {
+    atk: 3,
+    def: 6,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png'
+}
+
+let card104 = {
+  name: 'Marowak',
+  status: {
+    atk: 5,
+    def: 7,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/105.png'
+}
+
+let card105 = {
+  name: 'Hitmonlee',
+  status: {
+    atk: 8,
+    def: 4,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png'
+}
+
+let card106 = {
+  name: 'Hitmonchan',
+  status: {
+    atk: 7,
+    def: 5,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png'
+}
+
+let card107 = {
+  name: 'Lickitung',
+  status: {
+    atk: 4,
+    def: 5,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png'
+}
+
+let card108 = {
+  name: 'Koffing',
+  status: {
+    atk: 4,
+    def: 6,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/109.png'
+}
+
+let card109 = {
+  name: 'Weezing',
+  status: {
+    atk: 6,
+    def: 8,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/110.png'
+}
+
+let card110 = {
+  name: 'Rhyhorn',
+  status: {
+    atk: 5,
+    def: 6,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/111.png'
+}
+
+let card111 = {
+  name: 'Rhydon',
+  status: {
+    atk: 8,
+    def: 8,
+    hp: 7
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/112.png'
+}
+
+let card112 = {
+  name: 'Chansey',
+  status: {
+    atk: 1,
+    def: 1,
+    hp: 15
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png'
+}
+
+let card113 = {
+  name: 'Tangela',
+  status: {
+    atk: 4,
+    def: 7,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png'
+}
+
+let card114 = {
+  name: 'Kangaskhan',
+  status: {
+    atk: 6,
+    def: 5,
+    hp: 7
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png'
+}
+
+let card115 = {
+  name: 'Horsea',
+  status: {
+    atk: 3,
+    def: 5,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/116.png'
+}
+
+let card116 = {
+  name: 'Seadra',
+  status: {
+    atk: 4,
+    def: 6,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/117.png'
+}
+
+let card117 = {
+  name: 'Goldeen',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png'
+}
+
+let card118 = {
+  name: 'Seaking',
+  status: {
+    atk: 6,
+    def: 4,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/119.png'
+}
+
+let card119 = {
+  name: 'Staryu',
+  status: {
+    atk: 3,
+    def: 4,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png'
+}
+
+let card120 = {
+  name: 'Starmie',
+  status: {
+    atk: 5,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/121.png'
+}
+
+let card121 = {
+  name: 'Mr. Mime',
+  status: {
+    atk: 3,
+    def: 4,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png'
+}
+
+let card122 = {
+  name: 'Scyther',
+  status: {
+    atk: 7,
+    def: 5,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png'
+}
+
+let card123 = {
+  name: 'Jynx',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/124.png'
+}
+
+let card124 = {
+  name: 'Electabuzz',
+  status: {
+    atk: 5,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png'
+}
+
+let card125 = {
+  name: 'Magmar',
+  status: {
+    atk: 6,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png'
+}
+
+let card126 = {
+  name: 'Pinsir',
+  status: {
+    atk: 8,
+    def: 6,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png'
+}
+
+let card127 = {
+  name: 'Tauros',
+  status: {
+    atk: 6,
+    def: 6,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/128.png'
+}
+
+let card128 = {
+  name: 'Magikarp',
+  status: {
+    atk: 1,
+    def: 4,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png'
+}
+
+let card129 = {
+  name: 'Gyarados',
+  status: {
+    atk: 8,
+    def: 5,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png'
+}
+
+let card130 = {
+  name: 'Lapras',
+  status: {
+    atk: 5,
+    def: 5,
+    hp: 8
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/131.png'
+}
+
+let card131 = {
+  name: 'Ditto',
+  status: {
+    atk: 3,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png'
+}
+
+let card132 = {
+  name: 'Eevee',
+  status: {
+    atk: 4,
+    def: 3,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png'
+}
+
+let card133 = {
+  name: 'Vaporeon',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 8
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png'
+}
+
+let card134 = {
+  name: 'Jolteon',
+  status: {
+    atk: 4,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png'
+}
+
+let card135 = {
+  name: 'Flareon',
+  status: {
+    atk: 8,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/136.png'
+}
+
+let card136 = {
+  name: 'Porygon',
+  status: {
+    atk: 4,
+    def: 5,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png'
+}
+
+let card137 = {
+  name: 'Omanyte',
+  status: {
+    atk: 3,
+    def: 6,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/138.png'
+}
+
+let card138 = {
+  name: 'Omastar',
+  status: {
+    atk: 4,
+    def: 8,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/139.png'
+}
+
+let card139 = {
+  name: 'Kabuto',
+  status: {
+    atk: 5,
+    def: 6,
+    hp: 2
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/140.png'
+}
+
+let card140 = {
+  name: 'Kabutops',
+  status: {
+    atk: 7,
+    def: 7,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/141.png'
+}
+
+let card141 = {
+  name: 'Aerodactyl',
+  status: {
+    atk: 7,
+    def: 4,
+    hp: 5
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png'
+}
+
+let card142 = {
+  name: 'Snorlax',
+  status: {
+    atk: 7,
+    def: 4,
+    hp: 10
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png'
+}
+
+let card143 = {
+  name: 'Articuno',
+  status: {
+    atk: 5,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png'
+}
+
+let card144 = {
+  name: 'Zapdos',
+  status: {
+    atk: 5,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png'
+}
+
+let card145 = {
+  name: 'Moltres',
+  status: {
+    atk: 6,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png'
+}
+
+let card146 = {
+  name: 'Dratini',
+  status: {
+    atk: 4,
+    def: 3,
+    hp: 3
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png'
+}
+
+let card147 = {
+  name: 'Dragonair',
+  status: {
+    atk: 5,
+    def: 4,
+    hp: 4
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png'
+}
+
+let card148 = {
+  name: 'Dragonite',
+  status: {
+    atk: 8,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png'
+}
+
+let card149 = {
+  name: 'Mewtwo',
+  status: {
+    atk: 7,
+    def: 6,
+    hp: 7
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png'
+}
+
+let card150 = {
+  name: 'Mew',
+  status: {
+    atk: 6,
+    def: 6,
+    hp: 6
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png'
+}
+
+let card151 = {
+  name: 'MissingNo',
+  status: {
+    atk: 9999,
+    def: 9999,
+    hp: 9999
+  },
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/152.png'
 }
 
 let cardList = [
@@ -651,7 +1581,102 @@ let cardList = [
   card55,
   card56,
   card57,
-  card58
+  card58,
+  card59,
+  card60,
+  card60,
+  card60,
+  card61,
+  card62,
+  card63,
+  card64,
+  card65,
+  card66,
+  card67,
+  card68,
+  card69,
+  card70,
+  card71,
+  card72,
+  card73,
+  card74,
+  card75,
+  card76,
+  card77,
+  card78,
+  card79,
+  card80,
+  card81,
+  card82,
+  card83,
+  card84,
+  card85,
+  card86,
+  card87,
+  card88,
+  card89,
+  card90,
+  card91,
+  card92,
+  card93,
+  card94,
+  card95,
+  card96,
+  card97,
+  card98,
+  card99,
+  card100,
+  card101,
+  card102,
+  card103,
+  card104,
+  card105,
+  card106,
+  card107,
+  card108,
+  card109,
+  card110,
+  card111,
+  card112,
+  card113,
+  card114,
+  card115,
+  card16,
+  card117,
+  card118,
+  card119,
+  card120,
+  card121,
+  card122,
+  card123,
+  card124,
+  card125,
+  card126,
+  card127, 
+  card128,
+  card129,
+  card130,
+  card131,
+  card132,
+  card133,
+  card134,
+  card135,
+  card136,
+  card137,
+  card138,
+  card139,
+  card140,
+  card141,
+  card142,
+  card143,
+  card144,
+  card145,
+  card146,
+  card147,
+  card148,
+  card149,
+  card150,
+  card151
 ]
 let cardsHtml = ''
 
