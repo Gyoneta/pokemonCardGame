@@ -599,7 +599,7 @@ let card59 = {
     def: 3,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/60.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png'
 }
 
 let card60 = {
@@ -609,7 +609,7 @@ let card60 = {
     def: 4,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/61.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/061.png'
 }
 
 let card61 = {
@@ -619,7 +619,7 @@ let card61 = {
     def: 6,
     hp: 6
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/62.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/062.png'
 }
 
 let card62 = {
@@ -629,7 +629,7 @@ let card62 = {
     def: 1,
     hp: 2
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/63.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png'
 }
 
 let card63 = {
@@ -639,7 +639,7 @@ let card63 = {
     def: 2,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/64.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png'
 }
 
 let card64 = {
@@ -649,7 +649,7 @@ let card64 = {
     def: 3,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/65.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png'
 }
 
 let card65 = {
@@ -659,7 +659,7 @@ let card65 = {
     def: 3,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/66.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png'
 }
 
 let card66 = {
@@ -669,7 +669,7 @@ let card66 = {
     def: 5,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/67.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/067.png'
 }
 
 let card67 = {
@@ -679,7 +679,7 @@ let card67 = {
     def: 5,
     hp: 6
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/68.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png'
 }
 
 let card68 = {
@@ -689,7 +689,7 @@ let card68 = {
     def: 3,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/69.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png'
 }
 
 let card69 = {
@@ -699,7 +699,7 @@ let card69 = {
     def: 3,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/70.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/070.png'
 }
 
 let card70 = {
@@ -709,7 +709,7 @@ let card70 = {
     def: 4,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/71.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png'
 }
 
 let card71 = {
@@ -719,7 +719,7 @@ let card71 = {
     def: 3,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/72.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png'
 }
 
 let card72 = {
@@ -729,7 +729,7 @@ let card72 = {
     def: 4,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/73.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png'
 }
 
 let card73 = {
@@ -739,7 +739,7 @@ let card73 = {
     def: 6,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/74.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png'
 }
 
 let card74 = {
@@ -749,7 +749,7 @@ let card74 = {
     def: 7,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/75.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png'
 }
 
 let card75 = {
@@ -759,7 +759,7 @@ let card75 = {
     def: 8,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/76.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png'
 }
 
 let card76 = {
@@ -769,7 +769,7 @@ let card76 = {
     def: 4,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/77.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png'
 }
 
 let card77 = {
@@ -779,7 +779,7 @@ let card77 = {
     def: 5,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/78.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/078.png'
 }
 
 let card78 = {
@@ -789,7 +789,7 @@ let card78 = {
     def: 4,
     hp: 6
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/79.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png'
 }
 
 let card79 = {
@@ -799,7 +799,7 @@ let card79 = {
     def: 7,
     hp: 6
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/80.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png'
 }
 
 let card80 = {
@@ -809,7 +809,7 @@ let card80 = {
     def: 5,
     hp: 2
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/81.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png'
 }
 
 let card81 = {
@@ -819,7 +819,7 @@ let card81 = {
     def: 6,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/82.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png'
 }
 
 let card82 = {
@@ -829,7 +829,7 @@ let card82 = {
     def: 4,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/83.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png'
 }
 
 let card83 = {
@@ -839,7 +839,7 @@ let card83 = {
     def: 3,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/84.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png'
 }
 
 let card84 = {
@@ -849,7 +849,7 @@ let card84 = {
     def: 5,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/85.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/085.png'
 }
 
 let card85 = {
@@ -859,7 +859,7 @@ let card85 = {
     def: 4,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/86.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png'
 }
 
 let card86 = {
@@ -869,7 +869,7 @@ let card86 = {
     def: 5,
     hp: 6
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/87.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png'
 }
 
 let card87 = {
@@ -879,7 +879,7 @@ let card87 = {
     def: 3,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/88.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png'
 }
 
 let card88 = {
@@ -889,7 +889,7 @@ let card88 = {
     def: 5,
     hp: 7
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/89.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png'
 }
 
 let card89 = {
@@ -899,7 +899,7 @@ let card89 = {
     def: 6,
     hp: 2
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/90.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png'
 }
 
 let card90 = {
@@ -909,7 +909,7 @@ let card90 = {
     def: 11,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/91.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/091.png'
 }
 
 let card91 = {
@@ -919,7 +919,7 @@ let card91 = {
     def: 2,
     hp: 2
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/92.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png'
 }
 
 let card92 = {
@@ -929,7 +929,7 @@ let card92 = {
     def: 3,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/93.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png'
 }
 
 let card93 = {
@@ -939,7 +939,7 @@ let card93 = {
     def: 4,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/94.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png'
 }
 
 let card94 = {
@@ -949,7 +949,7 @@ let card94 = {
     def: 10,
     hp: 3
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/95.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png'
 }
 
 let card95 = {
@@ -959,7 +959,7 @@ let card95 = {
     def: 3,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/96.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png'
 }
 
 let card96 = {
@@ -969,7 +969,7 @@ let card96 = {
     def: 5,
     hp: 5
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/97.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/097.png'
 }
 
 let card97 = {
@@ -979,7 +979,7 @@ let card97 = {
     def: 6,
     hp: 2
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/98.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png'
 }
 
 let card98 = {
@@ -989,7 +989,7 @@ let card98 = {
     def: 7,
     hp: 4
   },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/99.png'
+  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png'
 }
 
 let card99 = {
@@ -1652,7 +1652,7 @@ let cardList = [
   card124,
   card125,
   card126,
-  card127, 
+  card127,
   card128,
   card129,
   card130,
