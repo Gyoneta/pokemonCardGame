@@ -675,47 +675,44 @@ function pickCard() {
 function selectCard(n) {
   cardsHtml += `<span>${cardList[n].name}</br>
   <img class="cardCase" src="${cardList[n].image}"></br></br>
-  Attack: ${cardList[n].status.atk} <input type="radio" name="status" value="${cardList[n].status.atk}" ></br></br>
-  Defense: ${cardList[n].status.def} <input type="radio" name="status" value="${cardList[n].status.def}" ></br></br>
-  HP: ${cardList[n].status.hp} <input type="radio" name="status" value="${cardList[n].status.hp}" "></br></br></br></span>`
+  Attack: ${cardList[n].status.atk} <input type="radio" name="status" id="atk_status" value="${cardList[n].status.atk}" ></br></br>
+  Defense: ${cardList[n].status.def} <input type="radio" name="status" id="def_status" value="${cardList[n].status.def}" ></br></br>
+  HP: ${cardList[n].status.hp} <input type="radio" name="status" id="hp_status" value="${cardList[n].status.hp}" "></br></br></br></span>`
 
   document.getElementById('options').innerHTML = cardsHtml
 }
+function machineStatsSelector() {
+  var atk_status = document.getElementById('atk_status')
+  var def_status = document.getElementById('def_status')
+  var hp_status = document.getElementById('hp_status')
 
+  if (atk_status.checked == true) {
+    let atkStats = cardList[machineCard].status.atk
+    situationAtk = true
+    return atkStats
+  } else if (def_status.checked == true) {
+    let defStats = cardList[machineCard].status.def
+    situationDef = true
+    return defStats
+  } else if (hp_status.checked == true) {
+    let hpStats = cardList[machineCard].status.hp
+    situationHp = true
+    return hpStats
+  }
+}
 function selectStatus() {
   var playerStats = document.getElementsByName('status')
 
   for (i = 0; i < playerStats.length; i++) {
     if (playerStats[i].checked == true) {
-      return playerStats[i].value
+      return playerStats[i].value // .value
     }
   }
 }
-
 function play() {
   console.log(cardList[machineCard].status)
-  if (
-    cardList[machineCard].status.atk >= cardList[machineCard].status.def &&
-    cardList[machineCard].status.atk >= cardList[machineCard].status.hp
-  ) {
-    var machineStats = cardList[machineCard].status.atk
-    console.log(machineStats)
-    situationAtk = true
-  } else if (
-    cardList[machineCard].status.def >= cardList[machineCard].status.atk &&
-    cardList[machineCard].status.def >= cardList[machineCard].status.hp
-  ) {
-    var machineStats = cardList[machineCard].status.def
-    console.log(machineStats)
-    situationDef = true
-  } else if (
-    cardList[machineCard].status.hp >= cardList[machineCard].status.atk &&
-    cardList[machineCard].status.hp >= cardList[machineCard].status.def
-  ) {
-    var machineStats = cardList[machineCard].status.hp
-    console.log(machineStats)
-    situationHp = true
-  }
+  let machineStats = machineStatsSelector()
+
   var selectedPlayerStats = selectStatus()
   // console.log(selectedPlayerStats)
 
@@ -723,15 +720,15 @@ function play() {
     if (situationAtk == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e seu atributo mais forte é Atk: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e seu Atk é: ${machineStats}`
     } else if (situationDef == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e seu atributo mais forte é Def: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e sua Def é: ${machineStats}`
     } else if (situationHp == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e seu atributo mais forte é HP: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br> você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard].name} e seu HP é: ${machineStats}`
     }
   } else if (selectedPlayerStats < machineStats) {
     if (situationAtk == true) {
