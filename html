@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class="page-title">Super Trunfo</h1>
+
+      <button onclick="pickCard()" id="randomCardPick">Sortear carta</button>
+
+      <form id="form">
+        <div class="options" id="options"></div>
+        <button type="button" id="playBtn" onclick="play()" disabled="true">
+          Jogar
+        </button>
+
+        <div id="resultado"></div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
