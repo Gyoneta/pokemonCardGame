@@ -1776,9 +1776,19 @@ function play() {
       'resultado'
     ).innerHTML = `zifudeu kakakaka, a carta da máquina é ${cardList[machineCard].name} e seu atributo de${cardList[machineCard].status} é ${machineStats}`*/
   } else if (selectedPlayerStats == machineStats) {
-    document.getElementById(
-      'resultado'
-    ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu ${cardList[machineCard].name} e seu atributo mais forte é ${machineStats}!`
+    if (situationAtk == true) {
+      document.getElementById(
+        'resultado'
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard].name} e seu Atk é: ${machineStats}!`
+    } else if (situationDef == true) {
+      document.getElementById(
+        'resultado'
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard].name} e sua Def é: ${machineStats}!`
+    } else if (situationHp == true) {
+      document.getElementById(
+        'resultado'
+      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard].name} e seu HP é: ${machineStats}!`
+    }
   }
   machineCase.classList.add('machineBorder')
 }
