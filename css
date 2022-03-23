@@ -33,7 +33,32 @@ h1 {
   text-align: center;
 }
 
-img {
+.playerBorder {
+  position: relative;
+  bottom: 880px;
+  max-height: 213px;
   max-width: 150px;
-  max-height: 150px;
+  left: 0px;
+  z-index: 1;
+}
+
+.machineBorder {
+  position: relative;
+  bottom: 790px;
+  max-height: 213px;
+  max-width: 150px;
+  left: 0px;
+  z-index: 1;
+}
+.cardCase {
+  position: relative;
+  top: 20px;
+  left: 0px;
+  z-index: 2;
+  max-width: 140px;
+  max-height: 140px;
+}
+
+#options {
+  z-index: 2;
 }
