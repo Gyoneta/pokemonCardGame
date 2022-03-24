@@ -1732,67 +1732,29 @@ console.log(machineDeck)
 function pickCard() {
   let playerCard1 = parseInt(Math.random() * cardList.length)
   console.log(cardList[playerCard1].name)
-  let playerCard2 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[playerCard2].name)
-  let playerCard3 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[playerCard3].name)
-  let playerCard4 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[playerCard4].name)
-  let playerCard5 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[playerCard5].name)
 
   if (
-    machineCard1 == playerCard1 ||
-    machineCard1 == playerCard2 ||
-    machineCard1 == playerCard3 ||
-    machineCard1 == playerCard4 ||
-    machineCard1 == playerCard5 ||
-    machineCard2 == playerCard3 ||
-    machineCard2 == playerCard4 ||
-    machineCard2 == playerCard5 ||
-    machineCard3 == playerCard4 ||
-    machineCard3 == playerCard5 ||
-    machineCard4 == playerCard5
+    playerCard1 == machineCard1 ||
+    playerCard1 == machineCard2 ||
+    playerCard1 == machineCard3 ||
+    playerCard1 == machineCard4 ||
+    playerCard1 == machineCard5
   ) {
     let playerCard1 = parseInt(Math.random() * cardList.length)
     console.log(cardList[playerCard1].name)
-    let playerCard2 = parseInt(Math.random() * cardList.length)
-    console.log(cardList[playerCard2].name)
-    let playerCard3 = parseInt(Math.random() * cardList.length)
-    console.log(cardList[playerCard3].name)
-    let playerCard4 = parseInt(Math.random() * cardList.length)
-    console.log(cardList[playerCard4].name)
-    let playerCard5 = parseInt(Math.random() * cardList.length)
-    console.log(cardList[playerCard5].name)
   }
   playerCase.classList.add('playerBorder')
-  let playerDeck = [
-    playerCard1,
-    playerCard2,
-    playerCard3,
-    playerCard4,
-    playerCard5
-  ]
-  console.log(playerDeck)
 
-  if (firstDuel == true) {
-    selectCard(playerCard1)
-  } else if (secondDuel == true) {
-    selectCard(playerCard2)
-  } else if (thirdDuel == true) {
-    selectCard(playerCard3)
-  } else if (fourthDuel == true) {
-    selectCard(playerCard4)
-  } else if (fifthDuel == true) {
-    selectCard(playerCard5)
-  }
+  selectCard(playerCard1)
 
   document.getElementById('randomCardPick').disabled = true
   document.getElementById('playBtn').disabled = false
+
+  return playerCard1
 }
 
 function selectCard(n) {
-  cardsHtml += `<span class="pokemonInfo">
+  cardsHtml = `<span class="pokemonInfo">
   <img class="cardCase" src="${cardList[n].image}"></br></br></br>${cardList[n].name}</br></br></br>
   Attack: ${cardList[n].status.atk}<input type="radio" name="status" id="atk_status" value="${cardList[n].status.atk}" >
   Defense: ${cardList[n].status.def} <input type="radio" name="status" id="def_status" value="${cardList[n].status.def}" >
@@ -1806,71 +1768,71 @@ function machineStatsSelector() {
   var hp_status = document.getElementById('hp_status')
   if (firstDuel == true) {
     if (atk_status.checked == true) {
-      let atkStats = cardList[machineCard1].status.atk
+      let atkStats = cardList[machineDeck[0]].status.atk
       situationAtk = true
       return atkStats
     } else if (def_status.checked == true) {
-      let defStats = cardList[machineCard1].status.def
+      let defStats = cardList[machineDeck[0]].status.def
       situationDef = true
       return defStats
     } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineCard1].status.hp
+      let hpStats = cardList[machineDeck[0]].status.hp
       situationHp = true
       return hpStats
     }
   } else if (secondDuel == true) {
     if (atk_status.checked == true) {
-      let atkStats = cardList[machineCard2].status.atk
+      let atkStats = cardList[machineDeck[0]].status.atk
       situationAtk = true
       return atkStats
     } else if (def_status.checked == true) {
-      let defStats = cardList[machineCard2].status.def
+      let defStats = cardList[machineDeck[0]].status.def
       situationDef = true
       return defStats
     } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineCard2].status.hp
+      let hpStats = cardList[machineDeck[0]].status.hp
       situationHp = true
       return hpStats
     }
   } else if (thirdDuel == true) {
     if (atk_status.checked == true) {
-      let atkStats = cardList[machineCard3].status.atk
+      let atkStats = cardList[machineDeck[0]].status.atk
       situationAtk = true
       return atkStats
     } else if (def_status.checked == true) {
-      let defStats = cardList[machineCard3].status.def
+      let defStats = cardList[machineDeck[0]].status.def
       situationDef = true
       return defStats
     } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineCard3].status.hp
+      let hpStats = cardList[machineDeck[0]].status.hp
       situationHp = true
       return hpStats
     }
   } else if (fourthDuel == true) {
     if (atk_status.checked == true) {
-      let atkStats = cardList[machineCard4].status.atk
+      let atkStats = cardList[machineDeck[0]].status.atk
       situationAtk = true
       return atkStats
     } else if (def_status.checked == true) {
-      let defStats = cardList[machineCard4].status.def
+      let defStats = cardList[machineDeck[0]].status.def
       situationDef = true
       return defStats
     } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineCard4].status.hp
+      let hpStats = cardList[machineDeck[0]].status.hp
       situationHp = true
       return hpStats
     }
   } else if (fifthDuel == true) {
     if (atk_status.checked == true) {
-      let atkStats = cardList[machineCard5].status.atk
+      let atkStats = cardList[machineDeck[0]].status.atk
       situationAtk = true
       return atkStats
     } else if (def_status.checked == true) {
-      let defStats = cardList[machineCard5].status.def
+      let defStats = cardList[machineDeck[0]].status.def
       situationDef = true
       return defStats
     } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineCard5].status.hp
+      let hpStats = cardList[machineDeck[0]].status.hp
       situationHp = true
       return hpStats
     }
@@ -1887,7 +1849,7 @@ function selectStatus() {
 }
 
 function play() {
-  console.log(cardList[machineCard1].status)
+  console.log(cardList[machineDeck[0]].status)
   let machineStats = machineStatsSelector()
 
   var selectedPlayerStats = selectStatus()
@@ -1897,29 +1859,53 @@ function play() {
     if (situationAtk == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard1].name} e seu Atk é: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu Atk é: ${machineStats}`
     } else if (situationDef == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard1].name} e sua Def é: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e sua Def é: ${machineStats}`
     } else if (situationHp == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${cardList[machineCard1].name} e seu HP é: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu HP é: ${machineStats}`
     }
   } else if (selectedPlayerStats < machineStats) {
     if (situationAtk == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${cardList[machineCard1].name} e seu atributo mais forte é Atk: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu atributo mais forte é Atk: ${machineStats}`
     } else if (situationDef == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard].image}"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${cardList[machineCard1].name} e seu atributo mais forte é Def: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu atributo mais forte é Def: ${machineStats}`
     } else if (situationHp == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${cardList[machineCard1].name} e seu atributo mais forte é HP: ${machineStats}`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu atributo mais forte é HP: ${machineStats}`
     }
 
     /*document.getElementById(
@@ -1929,30 +1915,53 @@ function play() {
     if (situationAtk == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard1].name} e seu Atk é: ${machineStats}!`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu Atk é: ${machineStats}!`
     } else if (situationDef == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard1].name} e sua Def é: ${machineStats}!`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e sua Def é: ${machineStats}!`
     } else if (situationHp == true) {
       document.getElementById(
         'resultado'
-      ).innerHTML = `<img class="cardCase" src="${cardList[machineCard1].image}"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${cardList[machineCard1].name} e seu HP é: ${machineStats}!`
+      ).innerHTML = `<img class="cardCase" src="${
+        cardList[machineDeck[0]].image
+      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
+        cardList[machineDeck[0]].name
+      } e seu HP é: ${machineStats}!`
     }
   }
   machineCase.classList.add('machineBorder')
 }
 
 function nextBattle() {
+  let card1 = pickCard()
   if (firstDuel == true) {
+    machineDeck.shift()
     firstDuel = false
     secondDuel = true
   } else if (secondDuel == true) {
+    machineDeck.shift()
     secondDuel = false
     thirdDuel = true
   } else if (thirdDuel == true) {
+    machineDeck.shift()
+
     thirdDuel = false
     fourthDuel = true
-  } else if ((fourthDuel = true)) fourthDuel = false
-  fifthDuel = true
+  } else if ((fourthDuel = true)) {
+    machineDeck.shift()
+
+    fourthDuel = false
+    fifthDuel = true
+  }
+
+  selectCard(card1)
 }
