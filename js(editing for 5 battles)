@@ -3,6 +3,7 @@ let situationDef = false
 let situationHp = false
 let playerCase = document.querySelector('.playerCase')
 let machineCase = document.querySelector('.machineCase')
+let result = document.querySelector('.result')
 let firstDuel = true
 let secondDuel = false
 let thirdDuel = false
@@ -1849,6 +1850,14 @@ function selectStatus() {
 }
 
 function play() {
+  /* if (
+    atk_status.checked == false ||
+    def_status.checked == false ||
+    hp_status.checked == false
+  ) {
+    alert('favor selecionar um status do seu pokemon!')
+    return
+  } */
   console.log(cardList[machineDeck[0]].status)
   let machineStats = machineStatsSelector()
 
@@ -1938,7 +1947,13 @@ function play() {
       } e seu HP é: ${machineStats}!`
     }
   }
+  playerCase.classList.add('adapted')
   machineCase.classList.add('machineBorder')
+  situationAtk = false
+  situationDef = false
+  situationHp = false
+  document.getElementById('nextBtn').disabled = false
+  document.getElementById('playBtn').disabled = true
 }
 
 function nextBattle() {
@@ -1964,4 +1979,7 @@ function nextBattle() {
   }
 
   selectCard(card1)
+  document.getElementById('randomCardPick').disabled = true
+  document.getElementById('playBtn').disabled = false
+  document.getElementById('nextBtn').disabled = true
 }
