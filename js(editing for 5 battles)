@@ -9,6 +9,9 @@ let secondDuel = false
 let thirdDuel = false
 let fourthDuel = false
 let fifthDuel = false
+let playerScore = []
+let machineScore = []
+let draw = []
 
 let card0 = {
   name: 'Bulbasaur',
@@ -1866,6 +1869,7 @@ function play() {
 
   if (selectedPlayerStats > machineStats) {
     if (situationAtk == true) {
+      playerScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1874,6 +1878,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e seu Atk é: ${machineStats}`
     } else if (situationDef == true) {
+      playerScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1882,6 +1887,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e sua Def é: ${machineStats}`
     } else if (situationHp == true) {
+      playerScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1892,6 +1898,7 @@ function play() {
     }
   } else if (selectedPlayerStats < machineStats) {
     if (situationAtk == true) {
+      machineScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1900,6 +1907,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e seu atributo mais forte é Atk: ${machineStats}`
     } else if (situationDef == true) {
+      machineScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1908,6 +1916,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e seu atributo mais forte é Def: ${machineStats}`
     } else if (situationHp == true) {
+      machineScore.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1922,6 +1931,7 @@ function play() {
     ).innerHTML = `zifudeu kakakaka, a carta da máquina é ${cardList[machineCard].name} e seu atributo de${cardList[machineCard].status} é ${machineStats}`*/
   } else if (selectedPlayerStats == machineStats) {
     if (situationAtk == true) {
+      draw.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1930,6 +1940,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e seu Atk é: ${machineStats}!`
     } else if (situationDef == true) {
+      draw.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1938,6 +1949,7 @@ function play() {
         cardList[machineDeck[0]].name
       } e sua Def é: ${machineStats}!`
     } else if (situationHp == true) {
+      draw.push(1)
       document.getElementById(
         'resultado'
       ).innerHTML = `<img class="cardCase" src="${
@@ -1957,6 +1969,7 @@ function play() {
 }
 
 function nextBattle() {
+  let end = false
   let card1 = pickCard()
   if (firstDuel == true) {
     machineDeck.shift()
@@ -1971,15 +1984,25 @@ function nextBattle() {
 
     thirdDuel = false
     fourthDuel = true
-  } else if ((fourthDuel = true)) {
+  } else if (fourthDuel == true) {
     machineDeck.shift()
 
     fourthDuel = false
     fifthDuel = true
+  } else if (fifthDuel == true) {
+    end = true
   }
-
   selectCard(card1)
   document.getElementById('randomCardPick').disabled = true
   document.getElementById('playBtn').disabled = false
   document.getElementById('nextBtn').disabled = true
+
+  if (end == true) {
+    document.getElementById('randomCardPick').disabled = true
+    document.getElementById('playBtn').disabled = true
+    document.getElementById('nextBtn').disabled = true
+    alert(
+      `Você ganhou ${playerScore.length}, máquina ganhou ${machineScore.length} e foram ${draw.length} empates!`
+    )
+  }
 }
