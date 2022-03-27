@@ -4,6 +4,7 @@ let situationHp = false
 let playerCase = document.querySelector('.playerCase')
 let machineCase = document.querySelector('.machineCase')
 let result = document.querySelector('.result')
+document.getElementById('nextBtn').disabled = true
 let firstDuel = true
 let secondDuel = false
 let thirdDuel = false
