@@ -1,11 +1,16 @@
 let situationAtk = false
 let situationDef = false
 let situationHp = false
-let playerCase = document.querySelector('.playerCase')
-let machineCase = document.querySelector('.machineCase')
-let result = document.querySelector('.result')
-document.getElementById('nextBtn').disabled = true
-let firstDuel = true
+let situationSpcAtk = false
+let situationSpcDef = false
+let situationSpd = false
+let $playerCase = document.querySelector('.playerCase')
+let $machineCase = document.querySelector('.machineCase')
+let $playerPokemonStats = document.querySelector('.playerPokemonStats')
+let $machinePokemonStats = document.querySelector('.machinePokemonStats')
+const machineInfo = document.querySelector('#machineInfo')
+const result = document.querySelector('#result')
+let firstDuel = false
 let secondDuel = false
 let thirdDuel = false
 let fourthDuel = false
@@ -14,1996 +19,261 @@ let playerScore = []
 let machineScore = []
 let draw = []
 
-let card0 = {
-  name: 'Bulbasaur',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png'
-}
-
-let card1 = {
-  name: 'Ivysair',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png'
-}
-
-let card2 = {
-  name: 'Venusaur',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png'
-}
-
-let card3 = {
-  name: 'Charmander',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png'
-}
-
-let card4 = {
-  name: 'Charmeleon',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png'
-}
-
-let card5 = {
-  name: 'Charizard',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png'
-}
-
-let card6 = {
-  name: 'Squirtle',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png'
-}
-
-let card7 = {
-  name: 'Wartortle',
-  status: {
-    atk: 4,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png'
-}
-
-let card8 = {
-  name: 'Blastoise',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png'
-}
-
-let card9 = {
-  name: 'Caterpie',
-  status: {
-    atk: 2,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png'
-}
-
-let card10 = {
-  name: 'Metapod',
-  status: {
-    atk: 2,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png'
-}
-
-let card11 = {
-  name: 'Butterfree',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png'
-}
-
-let card12 = {
-  name: 'Weedle',
-  status: {
-    atk: 3,
-    def: 2,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/013.png'
-}
-
-let card13 = {
-  name: 'Kakuna',
-  status: {
-    atk: 2,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/014.png'
-}
-
-let card14 = {
-  name: 'Beedrill',
-  status: {
-    atk: 6,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/015.png'
-}
-
-let card15 = {
-  name: 'Pidgey',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png'
-}
-
-let card16 = {
-  name: 'Pidgeotto',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png'
-}
-
-let card17 = {
-  name: 'Pidgeot',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/018.png'
-}
-
-let card18 = {
-  name: 'Rattata',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/019.png'
-}
-
-let card19 = {
-  name: 'Raticate',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/020.png'
-}
-
-let card20 = {
-  name: 'Spearow',
-  status: {
-    atk: 4,
-    def: 2,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/021.png'
-}
-
-let card21 = {
-  name: 'Fearow',
-  status: {
-    atk: 6,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/022.png'
-}
-
-let card22 = {
-  name: 'Ekans',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/023.png'
-}
-
-let card23 = {
-  name: 'Arbok',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/024.png'
-}
-
-let card24 = {
-  name: 'Pikachu',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png'
-}
-
-let card25 = {
-  name: 'Raichu',
-  status: {
-    atk: 6,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/026.png'
-}
-
-let card26 = {
-  name: 'Sandshrew',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/027.png'
-}
-
-let card27 = {
-  name: 'Sandslash',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/028.png'
-}
-
-let card28 = {
-  name: 'Nidoran(F)',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/029.png'
-}
-
-let card29 = {
-  name: 'Nidorina',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/030.png'
-}
-
-let card30 = {
-  name: 'Nidoqueen',
-  status: {
-    atk: 6,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/031.png'
-}
-
-let card31 = {
-  name: 'Nidoran(M)',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/032.png'
-}
-
-let card32 = {
-  name: 'Nidorino',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/033.png'
-}
-
-let card33 = {
-  name: 'Nidoking',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/034.png'
-}
-
-let card34 = {
-  name: 'Clefairy',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/035.png'
-}
-
-let card35 = {
-  name: 'Clefable',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/036.png'
-}
-
-let card36 = {
-  name: 'Vulpix',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png'
-}
-
-let card37 = {
-  name: 'Ninetales',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/038.png'
-}
-
-let card38 = {
-  name: 'Jigglypuff',
-  status: {
-    atk: 3,
-    def: 2,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png'
-}
-
-let card39 = {
-  name: 'Wigglytuff',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 9
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/040.png'
-}
-
-let card40 = {
-  name: 'Zubat',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/041.png'
-}
-
-let card41 = {
-  name: 'Golbat',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/042.png'
-}
-
-let card42 = {
-  name: 'Oddish',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/043.png'
-}
-
-let card43 = {
-  name: 'Gloom',
-  status: {
-    atk: 4,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png'
-}
-
-let card44 = {
-  name: 'Vileplume',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/045.png'
-}
-
-let card45 = {
-  name: 'Paras',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png'
-}
-
-let card46 = {
-  name: 'Parasect',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/047.png'
-}
-
-let card47 = {
-  name: 'Venonat',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/048.png'
-}
-
-let card48 = {
-  name: 'Venomoth',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/049.png'
-}
-
-let card49 = {
-  name: 'Diglett',
-  status: {
-    atk: 4,
-    def: 2,
-    hp: 1
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/050.png'
-}
-
-let card50 = {
-  name: 'Dugtrio',
-  status: {
-    atk: 999,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/051.png'
-}
-
-let card51 = {
-  name: 'Meowth',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png'
-}
-
-let card52 = {
-  name: 'Persian',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/053.png'
-}
-
-let card53 = {
-  name: 'Psyduck',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/054.png'
-}
-
-let card54 = {
-  name: 'Golduck',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/055.png'
-}
-
-let card55 = {
-  name: 'Mankey',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/056.png'
-}
-
-let card56 = {
-  name: 'Primeape',
-  status: {
-    atk: 7,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png'
-}
-
-let card57 = {
-  name: 'Growlithe',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/058.png'
-}
-
-let card58 = {
-  name: 'Arcanine',
-  status: {
-    atk: 7,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png'
-}
-
-let card59 = {
-  name: 'Poliwag',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/060.png'
-}
-
-let card60 = {
-  name: 'Poliwhirl',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/061.png'
-}
-
-let card61 = {
-  name: 'Poliwrath',
-  status: {
-    atk: 6,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/062.png'
-}
-
-let card62 = {
-  name: 'Abra',
-  status: {
-    atk: 2,
-    def: 1,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/063.png'
-}
-
-let card63 = {
-  name: 'Kadabra',
-  status: {
-    atk: 3,
-    def: 2,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/064.png'
-}
-
-let card64 = {
-  name: 'Alakazam',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/065.png'
-}
-
-let card65 = {
-  name: 'Machop',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png'
-}
-
-let card66 = {
-  name: 'Machoke',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/067.png'
-}
-
-let card67 = {
-  name: 'Machamp',
-  status: {
-    atk: 8,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/068.png'
-}
-
-let card68 = {
-  name: 'Bellsprout',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/069.png'
-}
-
-let card69 = {
-  name: 'Weepinbell',
-  status: {
-    atk: 6,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/070.png'
-}
-
-let card70 = {
-  name: 'Victreebel',
-  status: {
-    atk: 7,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/071.png'
-}
-
-let card71 = {
-  name: 'Tentacool',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/072.png'
-}
-
-let card72 = {
-  name: 'Tentacruel',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/073.png'
-}
-
-let card73 = {
-  name: 'Geodude',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/074.png'
-}
-
-let card74 = {
-  name: 'Graveler',
-  status: {
-    atk: 6,
-    def: 7,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/075.png'
-}
-
-let card75 = {
-  name: 'Golem',
-  status: {
-    atk: 8,
-    def: 8,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/076.png'
-}
-
-let card76 = {
-  name: 'Ponyta',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/077.png'
-}
-
-let card77 = {
-  name: 'Rapidash',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/078.png'
-}
-
-let card78 = {
-  name: 'Slowpoke',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/079.png'
-}
-
-let card79 = {
-  name: 'Slowbro',
-  status: {
-    atk: 5,
-    def: 7,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/080.png'
-}
-
-let card80 = {
-  name: 'Magnemite',
-  status: {
-    atk: 3,
-    def: 5,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/081.png'
-}
-
-let card81 = {
-  name: 'Magneton',
-  status: {
-    atk: 4,
-    def: 6,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/082.png'
-}
-
-let card82 = {
-  name: 'Farfetchd',
-  status: {
-    atk: 6,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/083.png'
-}
-
-let card83 = {
-  name: 'Doduo',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/084.png'
-}
-
-let card84 = {
-  name: 'Dodrio',
-  status: {
-    atk: 7,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/085.png'
-}
-
-let card85 = {
-  name: 'Seel',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/086.png'
-}
-
-let card86 = {
-  name: 'Dewgong',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/087.png'
-}
-
-let card87 = {
-  name: 'Grimer',
-  status: {
-    atk: 5,
-    def: 3,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/088.png'
-}
-
-let card88 = {
-  name: 'Muk',
-  status: {
-    atk: 7,
-    def: 5,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/089.png'
-}
-
-let card89 = {
-  name: 'Shellder',
-  status: {
-    atk: 4,
-    def: 6,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/090.png'
-}
-
-let card90 = {
-  name: 'Cloyster',
-  status: {
-    atk: 6,
-    def: 11,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/091.png'
-}
-
-let card91 = {
-  name: 'Gastly',
-  status: {
-    atk: 3,
-    def: 2,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/092.png'
-}
-
-let card92 = {
-  name: 'Haunter',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/093.png'
-}
-
-let card93 = {
-  name: 'Gengar',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png'
-}
-
-let card94 = {
-  name: 'Onix',
-  status: {
-    atk: 3,
-    def: 10,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/095.png'
-}
-
-let card95 = {
-  name: 'Drowzee',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/096.png'
-}
-
-let card96 = {
-  name: 'Hypno',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/097.png'
-}
-
-let card97 = {
-  name: 'Krabby',
-  status: {
-    atk: 7,
-    def: 6,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/098.png'
-}
-
-let card98 = {
-  name: 'Kingler',
-  status: {
-    atk: 8,
-    def: 7,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/099.png'
-}
-
-let card99 = {
-  name: 'Voltorb',
-  status: {
-    atk: 2,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/100.png'
-}
-
-let card100 = {
-  name: 'Electrode',
-  status: {
-    atk: 3,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/101.png'
-}
-
-let card101 = {
-  name: 'Exeggcute',
-  status: {
-    atk: 3,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/102.png'
-}
-
-let card102 = {
-  name: 'Exeggutor',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/103.png'
-}
-
-let card103 = {
-  name: 'Cubone',
-  status: {
-    atk: 3,
-    def: 6,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/104.png'
-}
-
-let card104 = {
-  name: 'Marowak',
-  status: {
-    atk: 5,
-    def: 7,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/105.png'
-}
-
-let card105 = {
-  name: 'Hitmonlee',
-  status: {
-    atk: 8,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/106.png'
-}
-
-let card106 = {
-  name: 'Hitmonchan',
-  status: {
-    atk: 7,
-    def: 5,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/107.png'
-}
-
-let card107 = {
-  name: 'Lickitung',
-  status: {
-    atk: 4,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/108.png'
-}
-
-let card108 = {
-  name: 'Koffing',
-  status: {
-    atk: 4,
-    def: 6,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/109.png'
-}
-
-let card109 = {
-  name: 'Weezing',
-  status: {
-    atk: 6,
-    def: 8,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/110.png'
-}
-
-let card110 = {
-  name: 'Rhyhorn',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/111.png'
-}
-
-let card111 = {
-  name: 'Rhydon',
-  status: {
-    atk: 8,
-    def: 8,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/112.png'
-}
-
-let card112 = {
-  name: 'Chansey',
-  status: {
-    atk: 1,
-    def: 1,
-    hp: 15
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/113.png'
-}
-
-let card113 = {
-  name: 'Tangela',
-  status: {
-    atk: 4,
-    def: 7,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/114.png'
-}
-
-let card114 = {
-  name: 'Kangaskhan',
-  status: {
-    atk: 6,
-    def: 5,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/115.png'
-}
-
-let card115 = {
-  name: 'Horsea',
-  status: {
-    atk: 3,
-    def: 5,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/116.png'
-}
-
-let card116 = {
-  name: 'Seadra',
-  status: {
-    atk: 4,
-    def: 6,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/117.png'
-}
-
-let card117 = {
-  name: 'Goldeen',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/118.png'
-}
-
-let card118 = {
-  name: 'Seaking',
-  status: {
-    atk: 6,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/119.png'
-}
-
-let card119 = {
-  name: 'Staryu',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/120.png'
-}
-
-let card120 = {
-  name: 'Starmie',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/121.png'
-}
-
-let card121 = {
-  name: 'Mr. Mime',
-  status: {
-    atk: 3,
-    def: 4,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/122.png'
-}
-
-let card122 = {
-  name: 'Scyther',
-  status: {
-    atk: 7,
-    def: 5,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/123.png'
-}
-
-let card123 = {
-  name: 'Jynx',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/124.png'
-}
-
-let card124 = {
-  name: 'Electabuzz',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/125.png'
-}
-
-let card125 = {
-  name: 'Magmar',
-  status: {
-    atk: 6,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/126.png'
-}
-
-let card126 = {
-  name: 'Pinsir',
-  status: {
-    atk: 8,
-    def: 6,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/127.png'
-}
-
-let card127 = {
-  name: 'Tauros',
-  status: {
-    atk: 6,
-    def: 6,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/128.png'
-}
-
-let card128 = {
-  name: 'Magikarp',
-  status: {
-    atk: 1,
-    def: 4,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/129.png'
-}
-
-let card129 = {
-  name: 'Gyarados',
-  status: {
-    atk: 8,
-    def: 5,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/130.png'
-}
-
-let card130 = {
-  name: 'Lapras',
-  status: {
-    atk: 5,
-    def: 5,
-    hp: 8
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/131.png'
-}
-
-let card131 = {
-  name: 'Ditto',
-  status: {
-    atk: 3,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/132.png'
-}
-
-let card132 = {
-  name: 'Eevee',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png'
-}
-
-let card133 = {
-  name: 'Vaporeon',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 8
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/134.png'
-}
-
-let card134 = {
-  name: 'Jolteon',
-  status: {
-    atk: 4,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/135.png'
-}
-
-let card135 = {
-  name: 'Flareon',
-  status: {
-    atk: 8,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/136.png'
-}
-
-let card136 = {
-  name: 'Porygon',
-  status: {
-    atk: 4,
-    def: 5,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/137.png'
-}
-
-let card137 = {
-  name: 'Omanyte',
-  status: {
-    atk: 3,
-    def: 6,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/138.png'
-}
-
-let card138 = {
-  name: 'Omastar',
-  status: {
-    atk: 4,
-    def: 8,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/139.png'
-}
-
-let card139 = {
-  name: 'Kabuto',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 2
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/140.png'
-}
-
-let card140 = {
-  name: 'Kabutops',
-  status: {
-    atk: 7,
-    def: 7,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/141.png'
-}
-
-let card141 = {
-  name: 'Aerodactyl',
-  status: {
-    atk: 7,
-    def: 4,
-    hp: 5
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/142.png'
-}
-
-let card142 = {
-  name: 'Snorlax',
-  status: {
-    atk: 7,
-    def: 4,
-    hp: 10
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png'
-}
-
-let card143 = {
-  name: 'Articuno',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png'
-}
-
-let card144 = {
-  name: 'Zapdos',
-  status: {
-    atk: 5,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/145.png'
-}
-
-let card145 = {
-  name: 'Moltres',
-  status: {
-    atk: 6,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/146.png'
-}
-
-let card146 = {
-  name: 'Dratini',
-  status: {
-    atk: 4,
-    def: 3,
-    hp: 3
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/147.png'
-}
-
-let card147 = {
-  name: 'Dragonair',
-  status: {
-    atk: 5,
-    def: 4,
-    hp: 4
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/148.png'
-}
-
-let card148 = {
-  name: 'Dragonite',
-  status: {
-    atk: 8,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/149.png'
-}
-
-let card149 = {
-  name: 'Mewtwo',
-  status: {
-    atk: 7,
-    def: 6,
-    hp: 7
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png'
-}
-
-let card150 = {
-  name: 'Mew',
-  status: {
-    atk: 6,
-    def: 6,
-    hp: 6
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/151.png'
-}
-
-let card151 = {
-  name: 'MissingNo',
-  status: {
-    atk: 9999,
-    def: 9999,
-    hp: 9999
-  },
-  image: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/152.png'
-}
-
-let cardList = [
-  card0,
-  card1,
-  card2,
-  card3,
-  card4,
-  card5,
-  card6,
-  card7,
-  card8,
-  card9,
-  card10,
-  card11,
-  card12,
-  card13,
-  card14,
-  card15,
-  card16,
-  card17,
-  card18,
-  card19,
-  card20,
-  card21,
-  card22,
-  card23,
-  card24,
-  card25,
-  card26,
-  card27,
-  card28,
-  card29,
-  card30,
-  card31,
-  card32,
-  card33,
-  card34,
-  card35,
-  card36,
-  card37,
-  card38,
-  card39,
-  card40,
-  card41,
-  card42,
-  card43,
-  card44,
-  card45,
-  card46,
-  card47,
-  card48,
-  card49,
-  card50,
-  card51,
-  card52,
-  card53,
-  card54,
-  card55,
-  card56,
-  card57,
-  card58,
-  card59,
-  card60,
-  card60,
-  card60,
-  card61,
-  card62,
-  card63,
-  card64,
-  card65,
-  card66,
-  card67,
-  card68,
-  card69,
-  card70,
-  card71,
-  card72,
-  card73,
-  card74,
-  card75,
-  card76,
-  card77,
-  card78,
-  card79,
-  card80,
-  card81,
-  card82,
-  card83,
-  card84,
-  card85,
-  card86,
-  card87,
-  card88,
-  card89,
-  card90,
-  card91,
-  card92,
-  card93,
-  card94,
-  card95,
-  card96,
-  card97,
-  card98,
-  card99,
-  card100,
-  card101,
-  card102,
-  card103,
-  card104,
-  card105,
-  card106,
-  card107,
-  card108,
-  card109,
-  card110,
-  card111,
-  card112,
-  card113,
-  card114,
-  card115,
-  card116,
-  card117,
-  card118,
-  card119,
-  card120,
-  card121,
-  card122,
-  card123,
-  card124,
-  card125,
-  card126,
-  card127,
-  card128,
-  card129,
-  card130,
-  card131,
-  card132,
-  card133,
-  card134,
-  card135,
-  card136,
-  card137,
-  card138,
-  card139,
-  card140,
-  card141,
-  card142,
-  card143,
-  card144,
-  card145,
-  card146,
-  card147,
-  card148,
-  card149,
-  card150,
-  card151
-]
-let cardsHtml = ''
-
-let machineCard1 = parseInt(Math.random() * cardList.length)
-console.log(cardList[machineCard1].name)
-let machineCard2 = parseInt(Math.random() * cardList.length)
-console.log(cardList[machineCard2].name)
-let machineCard3 = parseInt(Math.random() * cardList.length)
-console.log(cardList[machineCard3].name)
-let machineCard4 = parseInt(Math.random() * cardList.length)
-console.log(cardList[machineCard4].name)
-let machineCard5 = parseInt(Math.random() * cardList.length)
-console.log(cardList[machineCard5].name)
-
-if (
-  machineCard1 == machineCard2 ||
-  machineCard1 == machineCard3 ||
-  machineCard1 == machineCard4 ||
-  machineCard1 == machineCard5 ||
-  machineCard2 == machineCard3 ||
-  machineCard2 == machineCard4 ||
-  machineCard2 == machineCard5 ||
-  machineCard3 == machineCard4 ||
-  machineCard3 == machineCard5 ||
-  machineCard4 == machineCard5
-) {
-  let machineCard2 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[machineCard2].name)
-  let machineCard3 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[machineCard3].name)
-  let machineCard4 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[machineCard4].name)
-  let machineCard5 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[machineCard5].name)
-}
-
-let machineDeck = [
-  machineCard1,
-  machineCard2,
-  machineCard3,
-  machineCard4,
-  machineCard5
-]
-console.log(machineDeck)
-
-function pickCard() {
-  let playerCard1 = parseInt(Math.random() * cardList.length)
-  console.log(cardList[playerCard1].name)
-
-  if (
-    playerCard1 == machineCard1 ||
-    playerCard1 == machineCard2 ||
-    playerCard1 == machineCard3 ||
-    playerCard1 == machineCard4 ||
-    playerCard1 == machineCard5
-  ) {
-    let playerCard1 = parseInt(Math.random() * cardList.length)
-    console.log(cardList[playerCard1].name)
-  }
-  playerCase.classList.add('playerBorder')
-
-  selectCard(playerCard1)
-
-  document.getElementById('randomCardPick').disabled = true
+const pickCard = () => {
+  fetchPlayerPokemon()
+  fetchMachinePokemon()
   document.getElementById('playBtn').disabled = false
-
-  return playerCard1
-}
-
-function selectCard(n) {
-  cardsHtml = `<span class="pokemonInfo">
-  <img class="cardCase" src="${cardList[n].image}"></br></br></br>${cardList[n].name}</br></br></br>
-  Attack: ${cardList[n].status.atk}<input type="radio" name="status" id="atk_status" value="${cardList[n].status.atk}" >
-  Defense: ${cardList[n].status.def} <input type="radio" name="status" id="def_status" value="${cardList[n].status.def}" >
-  HP: ${cardList[n].status.hp} <input type="radio" name="status" id="hp_status" value="${cardList[n].status.hp}" ></br></br></span>`
-
-  document.getElementById('options').innerHTML = cardsHtml
-}
-function machineStatsSelector() {
-  var atk_status = document.getElementById('atk_status')
-  var def_status = document.getElementById('def_status')
-  var hp_status = document.getElementById('hp_status')
-  if (firstDuel == true) {
-    if (atk_status.checked == true) {
-      let atkStats = cardList[machineDeck[0]].status.atk
-      situationAtk = true
-      return atkStats
-    } else if (def_status.checked == true) {
-      let defStats = cardList[machineDeck[0]].status.def
-      situationDef = true
-      return defStats
-    } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineDeck[0]].status.hp
-      situationHp = true
-      return hpStats
-    }
-  } else if (secondDuel == true) {
-    if (atk_status.checked == true) {
-      let atkStats = cardList[machineDeck[0]].status.atk
-      situationAtk = true
-      return atkStats
-    } else if (def_status.checked == true) {
-      let defStats = cardList[machineDeck[0]].status.def
-      situationDef = true
-      return defStats
-    } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineDeck[0]].status.hp
-      situationHp = true
-      return hpStats
-    }
-  } else if (thirdDuel == true) {
-    if (atk_status.checked == true) {
-      let atkStats = cardList[machineDeck[0]].status.atk
-      situationAtk = true
-      return atkStats
-    } else if (def_status.checked == true) {
-      let defStats = cardList[machineDeck[0]].status.def
-      situationDef = true
-      return defStats
-    } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineDeck[0]].status.hp
-      situationHp = true
-      return hpStats
-    }
-  } else if (fourthDuel == true) {
-    if (atk_status.checked == true) {
-      let atkStats = cardList[machineDeck[0]].status.atk
-      situationAtk = true
-      return atkStats
-    } else if (def_status.checked == true) {
-      let defStats = cardList[machineDeck[0]].status.def
-      situationDef = true
-      return defStats
-    } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineDeck[0]].status.hp
-      situationHp = true
-      return hpStats
-    }
-  } else if (fifthDuel == true) {
-    if (atk_status.checked == true) {
-      let atkStats = cardList[machineDeck[0]].status.atk
-      situationAtk = true
-      return atkStats
-    } else if (def_status.checked == true) {
-      let defStats = cardList[machineDeck[0]].status.def
-      situationDef = true
-      return defStats
-    } else if (hp_status.checked == true) {
-      let hpStats = cardList[machineDeck[0]].status.hp
-      situationHp = true
-      return hpStats
-    }
-  }
-}
-function selectStatus() {
-  var playerStats = document.getElementsByName('status')
-
-  for (i = 0; i < playerStats.length; i++) {
-    if (playerStats[i].checked == true) {
-      return playerStats[i].value // .value
-    }
-  }
-}
-
-function play() {
-  /* if (
-    atk_status.checked == false ||
-    def_status.checked == false ||
-    hp_status.checked == false
-  ) {
-    alert('favor selecionar um status do seu pokemon!')
-    return
-  } */
-  console.log(cardList[machineDeck[0]].status)
-  let machineStats = machineStatsSelector()
-
-  var selectedPlayerStats = selectStatus()
-  // console.log(selectedPlayerStats)
-
-  if (selectedPlayerStats > machineStats) {
-    if (situationAtk == true) {
-      playerScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu Atk é: ${machineStats}`
-    } else if (situationDef == true) {
-      playerScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e sua Def é: ${machineStats}`
-    } else if (situationHp == true) {
-      playerScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você ganhou seu banana, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu HP é: ${machineStats}`
-    }
-  } else if (selectedPlayerStats < machineStats) {
-    if (situationAtk == true) {
-      machineScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu atributo mais forte é Atk: ${machineStats}`
-    } else if (situationDef == true) {
-      machineScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu atributo mais forte é Def: ${machineStats}`
-    } else if (situationHp == true) {
-      machineScore.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   você perdeu seu otareo, a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu atributo mais forte é HP: ${machineStats}`
-    }
-
-    /*document.getElementById(
-      'resultado'
-    ).innerHTML = `zifudeu kakakaka, a carta da máquina é ${cardList[machineCard].name} e seu atributo de${cardList[machineCard].status} é ${machineStats}`*/
-  } else if (selectedPlayerStats == machineStats) {
-    if (situationAtk == true) {
-      draw.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu Atk é: ${machineStats}!`
-    } else if (situationDef == true) {
-      draw.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e sua Def é: ${machineStats}!`
-    } else if (situationHp == true) {
-      draw.push(1)
-      document.getElementById(
-        'resultado'
-      ).innerHTML = `<img class="cardCase" src="${
-        cardList[machineDeck[0]].image
-      }"></br></br></br></br></br></br>   essa batalha deu empate! a carta do seu adversário é ${
-        cardList[machineDeck[0]].name
-      } e seu HP é: ${machineStats}!`
-    }
-  }
-  playerCase.classList.add('adapted')
-  machineCase.classList.add('machineBorder')
+  document.getElementById('randomCardPick').disabled = true
+  machineInfo.classList.add('hidden')
+  result.classList.add('hidden')
   situationAtk = false
   situationDef = false
   situationHp = false
-  document.getElementById('nextBtn').disabled = false
-  document.getElementById('playBtn').disabled = true
+  situationSpcAtk = false
+  situationSpcDef = false
+  situationSpd = false
 }
 
-function nextBattle() {
-  let end = false
-  let card1 = pickCard()
-  if (firstDuel == true) {
-    machineDeck.shift()
-    firstDuel = false
+const fetchPlayerPokemon = () => {
+  const playerPokemon = parseInt(Math.random() * 150)
+  fetch(`https://pokeapi.co/api/v2/pokemon/${playerPokemon}`)
+    .then(turnIntoJson)
+    .then(showPlayerPokemon)
+    .catch(showError)
+}
+
+const fetchMachinePokemon = () => {
+  const machinePokemon = parseInt(Math.random() * 150)
+  fetch(`https://pokeapi.co/api/v2/pokemon/${machinePokemon}`)
+    .then(turnIntoJson)
+    .then(showMachinePokemon)
+    .catch(showError2)
+}
+
+const turnIntoJson = response => {
+  return response.json()
+}
+
+const showPlayerPokemon = pokemon => {
+  $playerCase.src = pokemon.sprites.front_default
+
+  $playerPokemonStats.innerHTML = `</br><span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
+  Attack: ${pokemon.stats[1].base_stat}  <input type="radio" name="status" id="player_atk_stats" value="${pokemon.stats[1].base_stat}"></br>
+  Defense: ${pokemon.stats[2].base_stat} <input type="radio" name="status" id="player_def_stats" value="${pokemon.stats[2].base_stat}"></br>
+  Special-attack: ${pokemon.stats[3].base_stat}  <input type="radio" name="status" id="player_spc_atk_stats" value="${pokemon.stats[3].base_stat}"></br>
+  Special-defense: ${pokemon.stats[4].base_stat}  <input type="radio" name="status" id="player_spc_def_stats" value="${pokemon.stats[4].base_stat}"></br>
+  Speed: ${pokemon.stats[5].base_stat}  <input type="radio" name="status" id="player_spd_stats" value="${pokemon.stats[5].base_stat}"></br>
+  `
+}
+
+const showMachinePokemon = pokemon => {
+  $machineCase.src = pokemon.sprites.front_default
+  $machinePokemonStats.innerHTML = `</br> <span id="machinePokemon">${pokemon.name} </span></br>HP:<span id="machineHp" value="${pokemon.stats[0].base_stat}">${pokemon.stats[0].base_stat}</span> </br>
+   Attack: <span id="machineAtk" value="${pokemon.stats[1].base_stat}">${pokemon.stats[1].base_stat}</span> </br>
+  Defense: <span id="machineDef" value="${pokemon.stats[2].base_stat}">${pokemon.stats[2].base_stat}</span> </br>
+  Special-attack: <span id="machineSpcAtk" value="${pokemon.stats[3].base_stat}">${pokemon.stats[3].base_stat}</span></br>
+  Special-defense: <span id="machineSpcDef" value="${pokemon.stats[4].base_stat}">${pokemon.stats[4].base_stat}</span> </br>
+ Speed: <span id="machineSpd" value="${pokemon.stats[5].base_stat}">${pokemon.stats[5].base_stat} </span>
+  `
+}
+
+const showError = () => {
+  console.log('deu ruim')
+}
+
+const showError2 = () => {
+  console.log('deu ruim2')
+}
+
+const play = () => {
+  document.getElementById('playBtn').disabled = true
+  document.getElementById('randomCardPick').disabled = false
+  const machine_pokemon = document.getElementById('machinePokemon').innerHTML
+  const hp_stat = document.getElementById('player_hp_stats')
+  const atk_stat = document.getElementById('player_atk_stats')
+  const def_stat = document.getElementById('player_def_stats')
+  const spc_atk_stat = document.getElementById('player_spc_atk_stats')
+  const spc_def_stat = document.getElementById('player_spc_def_stats')
+  const spd_stat = document.getElementById('player_spd_stats')
+  machineInfo.classList.remove('hidden')
+  result.classList.remove('hidden')
+  // STATS DA MACHINE ESTÃO INACESSÍVEIS PQ ESTÃO DENTRO DA FUNÇÃO PQ EU DEI  DOCUMENT.GETELEMENTBYID().value
+  console.log(machine_pokemon)
+  if (
+    hp_stat.checked == false &&
+    atk_stat.checked == false &&
+    def_stat.checked == false &&
+    spc_atk_stat.checked == false &&
+    spc_def_stat.checked == false &&
+    spd_stat.checked == false
+  ) {
+    alert('Favor selecionar um Atributo!')
+    machineInfo.classList.add('hidden')
+    document.getElementById('randomCardPick').disabled = true
+    document.getElementById('playBtn').disabled = false
+
+    return
+  }
+
+  if (hp_stat.checked == true) {
+    const machineHp = parseInt(document.getElementById('machineHp').innerHTML)
+    situationHp = true
+
+    return battle(machine_pokemon, machineHp)
+  } else if (atk_stat.checked == true) {
+    const machineAtk = parseInt(document.getElementById('machineAtk').innerHTML)
+    situationAtk = true
+
+    return battle(machine_pokemon, machineAtk)
+  } else if (def_stat.checked == true) {
+    const machineDef = parseInt(document.getElementById('machineDef').innerHTML)
+    situationDef = true
+    return battle(machine_pokemon, machineDef)
+  } else if (spc_atk_stat.checked == true) {
+    const machineSpcAtk = parseInt(
+      document.getElementById('machineSpcAtk').innerHTML
+    )
+    situationSpcAtk = true
+    return battle(machine_pokemon, machineSpcAtk)
+  } else if (spc_def_stat.checked == true) {
+    const machineSpcDef = parseInt(
+      document.getElementById('machineSpcDef').innerHTML
+    )
+    situationSpcDef = true
+    return battle(machine_pokemon, machineSpcDef)
+  } else if (spd_stat.checked == true) {
+    const machineSpd = parseInt(document.getElementById('machineSpd').innerHTML)
+    situationSpd = true
+    return battle(machine_pokemon, machineSpd)
+  }
+
+  if (firstDuel == false) {
+    firstDuel = true
+  } else if (firstDuel == true && secondDuel == false) {
     secondDuel = true
-  } else if (secondDuel == true) {
-    machineDeck.shift()
-    secondDuel = false
+  } else if (secondDuel == true && thirdDuel == false) {
     thirdDuel = true
-  } else if (thirdDuel == true) {
-    machineDeck.shift()
-
-    thirdDuel = false
+  } else if (thirdDuel == true && fourthDuel == false) {
     fourthDuel = true
-  } else if (fourthDuel == true) {
-    machineDeck.shift()
-
-    fourthDuel = false
+  } else if (fourthDuel == true && fifthDuel == false) {
     fifthDuel = true
   } else if (fifthDuel == true) {
-    end = true
-  }
-  selectCard(card1)
-  document.getElementById('randomCardPick').disabled = true
-  document.getElementById('playBtn').disabled = false
-  document.getElementById('nextBtn').disabled = true
-
-  if (end == true) {
-    document.getElementById('randomCardPick').disabled = true
-    document.getElementById('playBtn').disabled = true
-    document.getElementById('nextBtn').disabled = true
     alert(
-      `Você ganhou ${playerScore.length}, máquina ganhou ${machineScore.length} e foram ${draw.length} empates!`
+      `Acabaram as lutas! Você ganhou ${playerScore.length}, seu adversário ganhou ${machineScore.length} e foram ${draw.length}!`
     )
+  }
+}
+
+const battle = (pokemon, stat) => {
+  console.log('oi')
+  const hp_stat = document.getElementById('player_hp_stats')
+  const atk_stat = document.getElementById('player_atk_stats')
+  const def_stat = document.getElementById('player_def_stats')
+  const spc_atk_stat = document.getElementById('player_spc_atk_stats')
+  const spc_def_stat = document.getElementById('player_spc_def_stats')
+  const spd_stat = document.getElementById('player_spd_stats')
+  const playerPokemon = document.getElementById('playerPokemon').innerHTML
+  console.log(`o ${pokemon} possui stats de ${stat}`)
+  if (situationHp == true) {
+    if (hp_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
+    } else if (hp_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
+    } else {
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem HP de ${hp_stat.value} !`
+    }
+  } else if (situationAtk == true) {
+    if (atk_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
+    } else if (atk_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
+    } else {
+      draw.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${atk_stat.value} !`
+    }
+  } else if (situationDef == true) {
+    if (def_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
+    } else if (def_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
+    } else {
+      draw.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Def de ${def_stat.value} !`
+    }
+  } else if (situationSpcAtk == true) {
+    if (spc_atk_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de Spc.Atk contra ${stat} de SpcAtk do ${pokemon} adversário!`
+    } else if (spc_atk_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de SpcAtk contra ${stat} de Spc.Atk do ${pokemon} adversário!`
+    } else {
+      draw.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${spc_atk_stat.value} !`
+    }
+  } else if (situationSpcDef == true) {
+    if (spc_def_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de Atk do ${pokemon} adversário!`
+    } else if (spc_def_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de HP do ${pokemon} adversário!`
+    } else {
+      draw.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spc.Def de ${spc_def_stat.value} !`
+    }
+  } else if (situationSpd == true) {
+    if (spd_stat.value > stat) {
+      playerScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
+    } else if (spd_stat.value < stat) {
+      machineScore.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
+    } else {
+      draw.push(1)
+      document.querySelector(
+        '#result'
+      ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spd de ${spd_stat.value} !`
+    }
   }
 }
