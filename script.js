@@ -275,4 +275,4 @@ const battle = (pokemon, stat) => {
       ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spd de ${spd_stat.value} !`
     }
   }
-}.then(showResult)
+}
