@@ -97,7 +97,7 @@ const play = () => {
   const spd_stat = document.getElementById('player_spd_stats')
   machineInfo.classList.remove('hidden')
   result.classList.remove('hidden')
-  // STATS DA MACHINE ESTÃO INACESSÍVEIS PQ ESTÃO DENTRO DA FUNÇÃO PQ EU DEI  DOCUMENT.GETELEMENTBYID().value
+
   console.log(machine_pokemon)
   if (
     hp_stat.checked == false &&
@@ -113,6 +113,22 @@ const play = () => {
     document.getElementById('playBtn').disabled = false
 
     return
+  }
+
+  if (firstDuel == false) {
+    firstDuel = true
+  } else if (firstDuel == true && secondDuel == false) {
+    secondDuel = true
+  } else if (secondDuel == true && thirdDuel == false) {
+    thirdDuel = true
+  } else if (thirdDuel == true && fourthDuel == false) {
+    fourthDuel = true
+  } else if (fourthDuel == true && fifthDuel == false) {
+    fifthDuel = true
+  } else if (fifthDuel == true) {
+    alert(
+      `Acabaram as lutas! Você ganhou ${playerScore.length}, seu adversário ganhou ${machineScore.length} e foram ${draw.length}!`
+    )
   }
 
   if (hp_stat.checked == true) {
@@ -146,26 +162,9 @@ const play = () => {
     situationSpd = true
     return battle(machine_pokemon, machineSpd)
   }
-
-  if (firstDuel == false) {
-    firstDuel = true
-  } else if (firstDuel == true && secondDuel == false) {
-    secondDuel = true
-  } else if (secondDuel == true && thirdDuel == false) {
-    thirdDuel = true
-  } else if (thirdDuel == true && fourthDuel == false) {
-    fourthDuel = true
-  } else if (fourthDuel == true && fifthDuel == false) {
-    fifthDuel = true
-  } else if (fifthDuel == true) {
-    alert(
-      `Acabaram as lutas! Você ganhou ${playerScore.length}, seu adversário ganhou ${machineScore.length} e foram ${draw.length}!`
-    )
-  }
 }
 
 const battle = (pokemon, stat) => {
-  console.log('oi')
   const hp_stat = document.getElementById('player_hp_stats')
   const atk_stat = document.getElementById('player_atk_stats')
   const def_stat = document.getElementById('player_def_stats')
@@ -276,4 +275,4 @@ const battle = (pokemon, stat) => {
       ).innerHTML = `</br></br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spd de ${spd_stat.value} !`
     }
   }
-}
+}.then(showResult)
