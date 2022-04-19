@@ -276,3 +276,5 @@ const battle = (pokemon, stat) => {
     }
   }
 }
+
+//teste
