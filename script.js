@@ -178,103 +178,101 @@ const battle = (pokemon, stat) => {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você GANHOU pois seu ${playerPokemon} possui ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
     } else if (hp_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${hp_stat.value} de HP contra ${stat} de HP do ${pokemon} adversário!`
     } else {
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem HP de ${hp_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem HP de ${hp_stat.value} !`
     }
   } else if (situationAtk == true) {
     if (atk_stat.value > stat) {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você GANHOU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
     } else if (atk_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${atk_stat.value} de Atk contra ${stat} de Atk do ${pokemon} adversário!`
     } else {
       draw.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${atk_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${atk_stat.value} !`
     }
   } else if (situationDef == true) {
     if (def_stat.value > stat) {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
+      ).innerHTML = `</br></brVocê GANHOU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
     } else if (def_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${def_stat.value} de Def contra ${stat} de Def do ${pokemon} adversário!`
     } else {
       draw.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Def de ${def_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Def de ${def_stat.value} !`
     }
   } else if (situationSpcAtk == true) {
     if (spc_atk_stat.value > stat) {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de Spc.Atk contra ${stat} de SpcAtk do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de Spc.Atk contra ${stat} de SpcAtk do ${pokemon} adversário!`
     } else if (spc_atk_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de SpcAtk contra ${stat} de Spc.Atk do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_atk_stat.value} de SpcAtk contra ${stat} de Spc.Atk do ${pokemon} adversário!`
     } else {
       draw.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${spc_atk_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Atk de ${spc_atk_stat.value} !`
     }
   } else if (situationSpcDef == true) {
     if (spc_def_stat.value > stat) {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de Atk do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de Atk do ${pokemon} adversário!`
     } else if (spc_def_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de HP do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spc_def_stat.value} de Spc.Def contra ${stat} de HP do ${pokemon} adversário!`
     } else {
       draw.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spc.Def de ${spc_def_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spc.Def de ${spc_def_stat.value} !`
     }
   } else if (situationSpd == true) {
     if (spd_stat.value > stat) {
       playerScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você GANHOU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
     } else if (spd_stat.value < stat) {
       machineScore.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
+      ).innerHTML = `</br></br>Você PERDEU pois seu ${playerPokemon} possui  ${spd_stat.value} de Spd contra ${stat} de Spd do ${pokemon} adversário!`
     } else {
       draw.push(1)
       document.querySelector(
         '#result'
-      ).innerHTML = `</br></br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spd de ${spd_stat.value} !`
+      ).innerHTML = `</br></br>EMPATOU!! TANTO seu ${playerPokemon} quanto ${pokemon} possuem Spd de ${spd_stat.value} !`
     }
   }
 }
-
-//teste
