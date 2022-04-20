@@ -127,7 +127,7 @@ const play = () => {
     fifthDuel = true
   } else if (fifthDuel == true) {
     alert(
-      `Acabaram as lutas! Você ganhou ${playerScore.length}, seu adversário ganhou ${machineScore.length} e foram ${draw.length}!`
+      `Acabaram as lutas! Você ganhou ${playerScore.length}, seu adversário ganhou ${machineScore.length} e foram ${draw.length} empates!`
     )
   }
 
