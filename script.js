@@ -55,6 +55,7 @@ const turnIntoJson = response => {
 }
 
 const showPlayerPokemon = pokemon => {
+  console.log(pokemon)
   $playerCase.src = pokemon.sprites.front_default
 
   $playerPokemonStats.innerHTML = `</br><span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
