@@ -19,7 +19,7 @@ body {
 
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .playerPokemonStats {
@@ -69,3 +69,4 @@ span.playerPokemonStats {
 div.playerInfo {
   margin-bottom: 3rem;
 }
+
