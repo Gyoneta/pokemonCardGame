@@ -30,12 +30,10 @@ body {
   color: #ffff;
 }
 
-span#playerPokemon{
+span#playerPokemon, span#machinePokemon, span.pokemon-name{
   text-transform: uppercase;
 }
-span#machinePokemon {
-  text-transform: uppercase;
-}
+
 
 
 #result {
