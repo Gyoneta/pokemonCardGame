@@ -57,7 +57,7 @@ const turnIntoJson = response => {
 const showPlayerPokemon = pokemon => {
   $playerCase.src = pokemon.sprites.front_default
 
-  $playerPokemonStats.innerHTML = `</br><span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
+  $playerPokemonStats.innerHTML = `<span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
   Attack: ${pokemon.stats[1].base_stat}  <input type="radio" name="status" id="player_atk_stats" value="${pokemon.stats[1].base_stat}"></br>
   Defense: ${pokemon.stats[2].base_stat} <input type="radio" name="status" id="player_def_stats" value="${pokemon.stats[2].base_stat}"></br>
   Special-attack: ${pokemon.stats[3].base_stat}  <input type="radio" name="status" id="player_spc_atk_stats" value="${pokemon.stats[3].base_stat}"></br>
@@ -68,7 +68,7 @@ const showPlayerPokemon = pokemon => {
 
 const showMachinePokemon = pokemon => {
   $machineCase.src = pokemon.sprites.front_default
-  $machinePokemonStats.innerHTML = `</br> <span id="machinePokemon">${pokemon.name} </span></br>
+  $machinePokemonStats.innerHTML = `<span id="machinePokemon">${pokemon.name} </span></br>
   HP:<span id="machineHp">${pokemon.stats[0].base_stat}</span> </br>
   Attack: <span id="machineAtk">${pokemon.stats[1].base_stat}</span> </br>
   Defense: <span id="machineDef">${pokemon.stats[2].base_stat}</span> </br>
