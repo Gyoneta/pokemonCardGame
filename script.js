@@ -296,3 +296,22 @@ const battle = (pokemon, stat) => {
     }
   }
 }
+
+
+const Main =  {
+  init: function() {
+    this.cacheSelector()
+    this.bindEvents()
+  },
+  
+  cacheSelector: function() {
+    
+  },
+ 
+  bindEvents: function () {
+
+  }
+ 
+}
+
+Main.init()
