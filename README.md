@@ -10,3 +10,4 @@ Just a simple card game to learn and test my skills
 
 3 - the status are not matching when you play against the machine's card, which should happen (needs to be changed)
 
+4 - this is a branch made to screw up so dont worry!    
