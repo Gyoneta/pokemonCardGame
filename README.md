@@ -9,3 +9,4 @@ Just a simple card game to learn and test my skills
 2 - i still need to learn how to style the page
 
 3 - the status are not matching when you play against the machine's card, which should happen (needs to be changed)
+
