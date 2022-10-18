@@ -4,12 +4,7 @@ let situationHp = false
 let situationSpcAtk = false
 let situationSpcDef = false
 let situationSpd = false
-let $playerCase = document.querySelector('.playerCase')
-let $machineCase = document.querySelector('.machineCase')
-let $playerPokemonStats = document.querySelector('.playerPokemonStats')
-let $machinePokemonStats = document.querySelector('.machinePokemonStats')
-const machineInfo = document.querySelector('#machineInfo')
-const result = document.querySelector('#result')
+
 let firstDuel = false
 let secondDuel = false
 let thirdDuel = false
@@ -19,20 +14,7 @@ let playerScore = []
 let machineScore = []
 let draw = []
 
-const pickCard = () => {
-  fetchPlayerPokemon()
-  fetchMachinePokemon()
-  document.getElementById('playBtn').disabled = false
-  document.getElementById('randomCardPick').disabled = true
-  machineInfo.classList.add('hidden')
-  result.classList.add('hidden')
-  situationAtk = false
-  situationDef = false
-  situationHp = false
-  situationSpcAtk = false
-  situationSpcDef = false
-  situationSpd = false
-}
+
 
 const fetchPlayerPokemon = () => {
   const playerPokemon = parseInt(Math.random() * 150)
@@ -302,14 +284,46 @@ const Main =  {
   init: function() {
     this.cacheSelector()
     this.bindEvents()
-  },
-  
-  cacheSelector: function() {
-    
+    this.Events()
   },
  
-  bindEvents: function () {
+  cacheSelector: function() {
+    console.log(this)
+    this.$playerCase = document.querySelector('.playerCase')
+    this.$machineCase = document.querySelector('.machineCase')
+    this.$playerPokemonStats = document.querySelector('.playerPokemonStats')
+    this.$machinePokemonStats = document.querySelector('.machinePokemonStats')
+    this.machineInfo = document.querySelector('#machineInfo')
+    this.result = document.querySelector('#result')
+    this.$playBtn = document.querySelector('#randomCardPick')
+    
+  },
 
+  Events: function() {
+    
+    const pickCard = () => {
+      fetchPlayerPokemon()
+      fetchMachinePokemon()
+      document.getElementById('playBtn').disabled = false
+      document.getElementById('randomCardPick').disabled = true
+      machineInfo.classList.add('hidden')
+      result.classList.add('hidden')
+      situationAtk = false
+      situationDef = false
+      situationHp = false
+      situationSpcAtk = false
+      situationSpcDef = false
+      situationSpd = false
+    }
+    pickCard()
+    
+  },
+  bindEvents: function () {
+    this.$playBtn.addEventListener('click', function() {
+      console.log(Main.Events)
+     // Main.Events()
+    })
+    
   }
  
 }
