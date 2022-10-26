@@ -4,10 +4,8 @@
 
 Just a simple card game to learn and test my skills
 
-1 - The code has not every single pokemon (not even from 1st gen)
+1 - The code has not every single pokemon (only 1st gen, more poekmons are to be added if Pokemon API adds them n JSON, easy to add them on JS file)
 
-2 - i still need to learn how to style the page
+2 - yet to improve CSS with a more "pokemon looking" theme
 
-3 - the status are not matching when you play against the machine's card, which should happen (needs to be changed)
-
-4 - branch creater (called scalable) so i can study js' scalability, mind which branch you are, future gabe!
+3 - branch created (called scalable) so i can study js' scalability, mind which branch you are, future gabe!
