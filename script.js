@@ -4,12 +4,7 @@ let situationHp = false
 let situationSpcAtk = false
 let situationSpcDef = false
 let situationSpd = false
-let $playerCase = document.querySelector('.playerCase')
-let $machineCase = document.querySelector('.machineCase')
-let $playerPokemonStats = document.querySelector('.playerPokemonStats')
-let $machinePokemonStats = document.querySelector('.machinePokemonStats')
-const machineInfo = document.querySelector('#machineInfo')
-const result = document.querySelector('#result')
+
 let firstDuel = false
 let secondDuel = false
 let thirdDuel = false
@@ -19,71 +14,23 @@ let playerScore = []
 let machineScore = []
 let draw = []
 
-const pickCard = () => {
-  fetchPlayerPokemon()
-  fetchMachinePokemon()
-  document.getElementById('playBtn').disabled = false
-  document.getElementById('randomCardPick').disabled = true
-  machineInfo.classList.add('hidden')
-  result.classList.add('hidden')
-  situationAtk = false
-  situationDef = false
-  situationHp = false
-  situationSpcAtk = false
-  situationSpcDef = false
-  situationSpd = false
-}
 
-const fetchPlayerPokemon = () => {
-  const playerPokemon = parseInt(Math.random() * 150)
-  fetch(`https://pokeapi.co/api/v2/pokemon/${playerPokemon}`)
-    .then(turnIntoJson)
-    .then(showPlayerPokemon)
-    .catch(showError)
-}
 
-const fetchMachinePokemon = () => {
-  const machinePokemon = parseInt(Math.random() * 150)
-  fetch(`https://pokeapi.co/api/v2/pokemon/${machinePokemon}`)
-    .then(turnIntoJson)
-    .then(showMachinePokemon)
-    .catch(showError2)
-}
+
+
+
 
 const turnIntoJson = response => {
   return response.json()
 }
 
-const showPlayerPokemon = pokemon => {
-  $playerCase.src = pokemon.sprites.front_default
-
-  $playerPokemonStats.innerHTML = `<span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
-  Attack: ${pokemon.stats[1].base_stat}  <input type="radio" name="status" id="player_atk_stats" value="${pokemon.stats[1].base_stat}"></br>
-  Defense: ${pokemon.stats[2].base_stat} <input type="radio" name="status" id="player_def_stats" value="${pokemon.stats[2].base_stat}"></br>
-  Special-attack: ${pokemon.stats[3].base_stat}  <input type="radio" name="status" id="player_spc_atk_stats" value="${pokemon.stats[3].base_stat}"></br>
-  Special-defense: ${pokemon.stats[4].base_stat}  <input type="radio" name="status" id="player_spc_def_stats" value="${pokemon.stats[4].base_stat}"></br>
-  Speed: ${pokemon.stats[5].base_stat}  <input type="radio" name="status" id="player_spd_stats" value="${pokemon.stats[5].base_stat}"></br>
-  `
-}
-
-const showMachinePokemon = pokemon => {
-  $machineCase.src = pokemon.sprites.front_default
-  $machinePokemonStats.innerHTML = `<span id="machinePokemon">${pokemon.name} </span></br>
-  HP:<span id="machineHp">${pokemon.stats[0].base_stat}</span> </br>
-  Attack: <span id="machineAtk">${pokemon.stats[1].base_stat}</span> </br>
-  Defense: <span id="machineDef">${pokemon.stats[2].base_stat}</span> </br>
-  Special-attack: <span id="machineSpcAtk">${pokemon.stats[3].base_stat}</span></br>
-  Special-defense: <span id="machineSpcDef">${pokemon.stats[4].base_stat}</span> </br>
-  Speed: <span id="machineSpd">${pokemon.stats[5].base_stat} </span>
-  `
-}
 
 const showError = () => {
   console.log('deu ruim')
 }
 
-const showError2 = () => {
-  console.log('deu ruim2')
+const showError2 = (error) => {
+  console.log(error)
 }
 
 const play = () => {
@@ -296,3 +243,149 @@ const battle = (pokemon, stat) => {
     }
   }
 }
+
+
+const Main =  {
+  init: function() {
+    this.cacheSelector()
+    this.cache
+    this.bindEvents()
+    this.Events
+  },
+ 
+  cacheSelector: function() {
+    this.$playerCase = document.querySelector('.playerCase')
+    this.$machineCase = document.querySelector('.machineCase')
+    this.$playerPokemonStats = document.querySelector('.playerPokemonStats')
+    this.$machinePokemonStats = document.querySelector('.machinePokemonStats')
+    this.machineInfo = document.querySelector('#machineInfo')
+    this.result = document.querySelector('#result')
+    this.$playBtn = document.querySelector('#randomCardPick')
+    
+  },
+
+   cache: {
+    showPlayerPokemon: pokemon => {
+ 
+      Main.$playerCase.src = pokemon.sprites.front_default
+       console.log(pokemon)
+      Main.$playerPokemonStats.innerHTML = `<span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
+       Attack: ${pokemon.stats[1].base_stat}  <input type="radio" name="status" id="player_atk_stats" value="${pokemon.stats[1].base_stat}"></br>
+       Defense: ${pokemon.stats[2].base_stat} <input type="radio" name="status" id="player_def_stats" value="${pokemon.stats[2].base_stat}"></br>
+       Special-attack: ${pokemon.stats[3].base_stat}  <input type="radio" name="status" id="player_spc_atk_stats" value="${pokemon.stats[3].base_stat}"></br>
+       Special-defense: ${pokemon.stats[4].base_stat}  <input type="radio" name="status" id="player_spc_def_stats" value="${pokemon.stats[4].base_stat}"></br>
+       Speed: ${pokemon.stats[5].base_stat}  <input type="radio" name="status" id="player_spd_stats" value="${pokemon.stats[5].base_stat}"></br>
+       `
+     },
+     showMachinePokemon: pokemon => {
+    
+      Main.$machineCase.src = pokemon.sprites.front_default
+      console.log(pokemon)
+      Main.$machinePokemonStats.innerHTML = `<span id="machinePokemon">${pokemon.name} </span></br>
+       HP:<span id="machineHp">${pokemon.stats[0].base_stat}</span> </br>
+       Attack: <span id="machineAtk">${pokemon.stats[1].base_stat}</span> </br>
+       Defense: <span id="machineDef">${pokemon.stats[2].base_stat}</span> </br>
+       Special-attack: <span id="machineSpcAtk">${pokemon.stats[3].base_stat}</span></br>
+       Special-defense: <span id="machineSpcDef">${pokemon.stats[4].base_stat}</span> </br>
+       Speed: <span id="machineSpd">${pokemon.stats[5].base_stat} </span>
+       `
+     },
+
+     fetchPlayerPokemon: () => {
+      const playerPokemon = parseInt(Math.random() * 150)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${playerPokemon}`)
+        .then(turnIntoJson)
+        .then(Main.cache.showPlayerPokemon)
+        .catch(showError)
+    },
+    
+    fetchMachinePokemon: () => {
+      const machinePokemon = parseInt(Math.random() * 150)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${machinePokemon}`)
+        .then(turnIntoJson)
+        .then(Main.cache.showMachinePokemon)
+        .catch(showError2)
+    }
+    
+
+    },
+    
+    /*
+    {showMachinePokemon: pokemon => {
+    
+      Main.$machineCase.src = pokemon.sprites.front_default
+      console.log(pokemon)
+      Main.$machinePokemonStats.innerHTML = `<span id="machinePokemon">${pokemon.name} </span></br>
+       HP:<span id="machineHp">${pokemon.stats[0].base_stat}</span> </br>
+       Attack: <span id="machineAtk">${pokemon.stats[1].base_stat}</span> </br>
+       Defense: <span id="machineDef">${pokemon.stats[2].base_stat}</span> </br>
+       Special-attack: <span id="machineSpcAtk">${pokemon.stats[3].base_stat}</span></br>
+       Special-defense: <span id="machineSpcDef">${pokemon.stats[4].base_stat}</span> </br>
+       Speed: <span id="machineSpd">${pokemon.stats[5].base_stat} </span>
+       `
+     }
+    },
+
+
+    { const fetchPlayerPokemon = () => {
+      const playerPokemon = parseInt(Math.random() * 150)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${playerPokemon}`)
+        .then(turnIntoJson)
+        .then(showPlayerPokemon)
+        .catch(showError)
+    }
+  },
+    
+    {const fetchMachinePokemon = () => {
+      const machinePokemon = parseInt(Math.random() * 150)
+      fetch(`https://pokeapi.co/api/v2/pokemon/${machinePokemon}`)
+        .then(turnIntoJson)
+        .then(showMachinePokemon)
+        .catch(showError2)
+    }
+  }
+
+
+*/
+
+  Events: {
+    getCards: function() {    
+    const self = Main
+    const pickCard = () => {
+      console.log(self.cache.showMachinePokemon)
+      self.cache.fetchPlayerPokemon()
+      self.cache.fetchMachinePokemon()
+      document.getElementById('playBtn').disabled = false
+      document.getElementById('randomCardPick').disabled = true
+      machineInfo.classList.add('hidden')
+      result.classList.add('hidden')
+      situationAtk = false
+      situationDef = false
+      situationHp = false
+      situationSpcAtk = false
+      situationSpcDef = false
+      situationSpd = false
+      
+    }
+    pickCard()
+    
+  }
+}
+
+  ,
+  bindEvents: function () {
+    this.$playBtn.addEventListener('click', function() {
+      console.log(Main.Events.getCards)
+     Main.Events.getCards()
+    })
+    
+  }
+ 
+}
+console.log(Main.cache)
+Main.init()
+
+
+
+ 
+
