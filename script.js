@@ -266,10 +266,9 @@ const Main =  {
 
    cache: {
     showPlayerPokemon: pokemon => {
- 
-      Main.$playerCase.src = pokemon.sprites.front_default
+       Main.$playerCase.src = pokemon.sprites.front_default
        console.log(pokemon)
-      Main.$playerPokemonStats.innerHTML = `<span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
+       Main.$playerPokemonStats.innerHTML = `<span id="playerPokemon">${pokemon.name} </span></br>HP: ${pokemon.stats[0].base_stat}  <input type="radio" name="status" id="player_hp_stats" value="${pokemon.stats[0].base_stat}"></br>
        Attack: ${pokemon.stats[1].base_stat}  <input type="radio" name="status" id="player_atk_stats" value="${pokemon.stats[1].base_stat}"></br>
        Defense: ${pokemon.stats[2].base_stat} <input type="radio" name="status" id="player_def_stats" value="${pokemon.stats[2].base_stat}"></br>
        Special-attack: ${pokemon.stats[3].base_stat}  <input type="radio" name="status" id="player_spc_atk_stats" value="${pokemon.stats[3].base_stat}"></br>
@@ -277,6 +276,7 @@ const Main =  {
        Speed: ${pokemon.stats[5].base_stat}  <input type="radio" name="status" id="player_spd_stats" value="${pokemon.stats[5].base_stat}"></br>
        `
      },
+
      showMachinePokemon: pokemon => {
     
       Main.$machineCase.src = pokemon.sprites.front_default
@@ -309,49 +309,11 @@ const Main =  {
     
 
     },
-    
-    /*
-    {showMachinePokemon: pokemon => {
-    
-      Main.$machineCase.src = pokemon.sprites.front_default
-      console.log(pokemon)
-      Main.$machinePokemonStats.innerHTML = `<span id="machinePokemon">${pokemon.name} </span></br>
-       HP:<span id="machineHp">${pokemon.stats[0].base_stat}</span> </br>
-       Attack: <span id="machineAtk">${pokemon.stats[1].base_stat}</span> </br>
-       Defense: <span id="machineDef">${pokemon.stats[2].base_stat}</span> </br>
-       Special-attack: <span id="machineSpcAtk">${pokemon.stats[3].base_stat}</span></br>
-       Special-defense: <span id="machineSpcDef">${pokemon.stats[4].base_stat}</span> </br>
-       Speed: <span id="machineSpd">${pokemon.stats[5].base_stat} </span>
-       `
-     }
-    },
-
-
-    { const fetchPlayerPokemon = () => {
-      const playerPokemon = parseInt(Math.random() * 150)
-      fetch(`https://pokeapi.co/api/v2/pokemon/${playerPokemon}`)
-        .then(turnIntoJson)
-        .then(showPlayerPokemon)
-        .catch(showError)
-    }
-  },
-    
-    {const fetchMachinePokemon = () => {
-      const machinePokemon = parseInt(Math.random() * 150)
-      fetch(`https://pokeapi.co/api/v2/pokemon/${machinePokemon}`)
-        .then(turnIntoJson)
-        .then(showMachinePokemon)
-        .catch(showError2)
-    }
-  }
-
-
-*/
 
   Events: {
-    getCards: function() {    
+    pickCard: () =>  {    
     const self = Main
-    const pickCard = () => {
+    
       console.log(self.cache.showMachinePokemon)
       self.cache.fetchPlayerPokemon()
       self.cache.fetchMachinePokemon()
@@ -367,16 +329,16 @@ const Main =  {
       situationSpd = false
       
     }
-    pickCard()
+   
     
-  }
+  
 }
 
   ,
   bindEvents: function () {
     this.$playBtn.addEventListener('click', function() {
-      console.log(Main.Events.getCards)
-     Main.Events.getCards()
+      console.log(Main.Events.pickCard)
+     Main.Events.pickCard()
     })
     
   }
