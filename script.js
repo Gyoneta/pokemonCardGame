@@ -251,8 +251,7 @@ const Main =  {
     play: () => {
       const self = Main
       
-      self.$playBtn.disabled = true
-      self.$pickCard.disabled = false
+      
       const machine_pokemon = document.getElementById('machinePokemon').innerHTML
       const hp_stat = document.getElementById('player_hp_stats')
       const atk_stat = document.getElementById('player_atk_stats')
@@ -275,11 +274,13 @@ const Main =  {
         alert('Favor selecionar um Atributo!')
         result.classList.add('hidden')
         machineInfo.classList.add('hidden')
-        document.getElementById('#pickCard').disabled = true
+        document.getElementById('#playBtn').disabled = true
         document.getElementById('#pickCard').disabled = false
     
         return
       }
+      self.$playBtn.disabled = true
+      self.$pickCard.disabled = false
     
       if (firstDuel == false) {
         firstDuel = true
