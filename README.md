@@ -1,6 +1,6 @@
 # pokemonCardGame
 
-[IT IS NOT INTENDED TO BE USED FOR REASONS OTHERS THAN STUDYING]
+[IT IS NOT INTENDED TO BE USED FOR REASONS OTHER THAN STUDYING]
 
 Just a simple card game to learn and test my skills
 
